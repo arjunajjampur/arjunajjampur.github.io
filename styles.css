@@ -1,0 +1,730 @@
+:root {
+    --primary-color: rgba(39, 39, 39,1);
+    --primary-text-color: rgb(237, 237, 237);
+    --secondary-color: rgba(254, 255, 244,1);
+    --secondary-text-color:rgba(39, 39, 39,1);
+    --primary-link-color: rgba(158, 199, 97,1);
+    --primary-border-color: rgba(0,0,0,1);
+}
+
+.author {
+    font-size: 2rem;
+    font-size: clamp(2.375rem, 4.83761vw, 4.625rem);
+    font-weight: 700;
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* max-width:75%; */
+    flex: content;
+    flex-direction:row;
+    /* padding-left: 40px; */
+    color: var(--primary-text-color);
+}
+
+.header h1 {
+    margin: 20px;
+    display: flex;
+    /* position: relative; */
+    color: var(--primary-text-color);
+}
+
+.process h3 {
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.5rem;
+    font-size: clamp(1.875rem, 3.41vw, 3.7rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:120%;
+    margin: 0px;
+    color: #00222d;
+    /* -webkit-text-stroke: 1px #cbcbcb;
+    -webkit-text-fill-color: rgba(255, 255, 255,0); */
+}
+
+
+
+
+body {
+    /* padding: 20px; */
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 120%;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+h2 {
+    margin-top: 40px;
+    /* margin-left: 40px; */
+    font-size: 2rem;
+    font-size: clamp(1.375rem, 4.83761vw, 5.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    /* margin: 40px; */
+    text-decoration: underline;
+    text-underline-position: right under;
+    text-decoration-color: rgba(9, 132, 125,0.5);
+    text-underline-offset: -0.5rem;
+    
+}
+a {
+    text-decoration: none;
+    
+}
+
+/* This handles text of the about section in default mode */
+.page1 h3 {
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 4.83761vw, 5.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    margin: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: rgba(255, 255, 255,0);
+}
+
+/* This handles text of the about section in hover mode */
+/* Similar rule for all pages -2,3,4 */
+
+.page1:hover h3 {
+    cursor: pointer;
+    -webkit-text-stroke: 0px;
+    -webkit-text-fill-color: var(--primary-link-color)
+}
+
+.page2 h3 {
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 4.83761vw, 5.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    margin: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: rgba(255, 255, 255,0);
+}
+
+.page2:hover h3 {
+    cursor: pointer;
+    -webkit-text-stroke: 0px;
+    -webkit-text-fill-color: var(--primary-link-color)
+}
+
+.page3 h3 {
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 4.83761vw, 5.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    margin: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: rgba(255, 255, 255,0);
+}
+
+.page3:hover h3 {
+    cursor: pointer;
+    -webkit-text-stroke: 0px;
+    -webkit-text-fill-color: var(--primary-link-color)
+}
+
+.page4 h3 {
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 4.83761vw, 5.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    margin: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: rgba(255, 255, 255,0);
+}
+
+.page4:hover h3 {
+    cursor: pointer;
+    -webkit-text-stroke: 0px;
+    -webkit-text-fill-color: var(--primary-link-color)
+}
+
+.column1 .column3 {
+    flex: 33.33%;
+    margin: 5px;
+    text-align: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.desc {
+    /* font-family: interstate; */
+    /* margin-left: 40px; */
+    /* padding-top: 40px; */
+    /* padding-bottom: 40px; */
+    /* padding-right: 40px; */
+    position: relative;
+    /* width: 800px; */
+    font-size: 1rem;
+    font-size: clamp(0.75rem, 1.19vw, 1rem);
+    font-weight: 200;
+    font-style: normal;
+    /* line-height: 100%; */
+    line-height: 1.4;
+    max-width: 100%;
+    word-wrap: break-word;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+
+
+.aboutme {
+    font-family: serif;
+    /* margin-left: 40px; */
+    padding-right: 40px;
+    position: relative;
+    /* width: 800px; */
+    max-width: 70%;
+    overflow: hidden;
+    font-size: 2rem;
+    font-size: clamp(1.23rem, 1.3vw, 1.5rem);
+    line-height: 100%;
+    line-height: 1.3;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.door {
+    max-width: 400px;
+}
+
+.header img {
+    width: 10%;
+    height: 10%;
+    float: left;
+    object-fit: contain;
+    
+}
+
+.column {
+    width: 33.33%;
+    float: left;
+}
+
+.images-story img {
+    margin: 10px;
+    display: grid;
+    width: 30%;
+    height: 30%;
+    max-height: 40%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+}
+
+p.desc strong {
+    color:rgb(9, 132, 125);
+}
+
+p.desc em {
+    color: var(--primary-link-color);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.desc a{
+    text-decoration: underline;
+    color: var(--primary-link-color);
+}
+
+.aboutme a {
+    text-decoration: underline;
+    color: var(--primary-link-color);
+}
+
+.aboutme em {
+    text-decoration: none;
+    color: var(--primary-link-color);
+}
+
+.columnA {
+    /* float:left; */
+    /* width: 25%; */
+
+    /* padding: 20px; */
+    border-style: solid;
+    border-color: var(--primary-border-color);
+    border-width: 2px;
+    margin-bottom: 0;
+}
+/* 
+.columnB {
+    float:left;
+    width: 70%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2px;
+    border-width: 2px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+} */
+
+.process img {
+    position: relative;
+    height: 25%;
+    width: 25%;
+    object-fit: contain;
+    /* padding: 40px; */
+    /* max-width: 80%; */
+}
+
+/* .row {
+   </div> margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    column-gap: 10px;
+    max-width: 60%;
+} */
+
+.process p{
+    font-family: interstate-compressed, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.5rem;
+    font-size: clamp(1.875rem, 3.41vw, 3.7rem);
+    font-weight: 400;
+    font-style: normal;
+    line-height:120%;
+    /* margin: 5px; */
+    color: #00222d;
+}
+
+.process-desc p{
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(.8rem, 1.141vw, 1rem);
+    font-weight: 100;
+    font-style: normal;
+    line-height:120%;
+    /* margin-bottom: 5px; */
+    color: #00222d;
+}
+
+/* .process-list {
+    max-height: 800px;
+    overflow: scroll;
+    box-shadow: 10px 10px var(--primary-link-color);
+    background-color: var(--primary-text-color);
+    border: 2px solid var(--primary-border-color);
+} */
+
+.process {
+    padding: 20px;
+    margin-bottom: 40px;
+    overflow: scroll;
+    box-shadow: 10px 10px var(--primary-link-color);
+    background-color: var(--primary-text-color);
+    border: 2px solid var(--primary-border-color);
+}
+
+
+.wrapper{
+    min-height: 100vh;
+    /* background: black; */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 100px;
+    /* background: black; */
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 1rem;
+    font-size: clamp(1.375rem, 2.83761vw, 2.625rem);
+    font-weight: 700;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.header img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px;
+    
+}
+
+/* #arjun-icon {
+    border-style: solid;
+    border-color: #ffffff;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px;
+} */
+
+.content {
+    display: flex;
+    flex: 1;
+    /* background: rgb(49, 49, 49); */
+    /* color: #000;  */
+  }
+  .columns{
+    display: flex;
+    flex:1;
+    margin-top: 40px;
+  }
+
+  .main{
+    row-gap: 40px;
+    flex: 1;
+    order: 2;
+  }
+
+  .author {
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 2.83761vw, 4.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    margin: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: rgba(213, 213, 213, 0);
+
+  }
+
+  .philo {
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 2.83761vw, 4.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    /* margin: 5px; */
+    text-transform: uppercase;
+    /* -webkit-text-stroke: 1px rgba(212, 212, 212, 0.871); */
+    -webkit-text-fill-color: var(--primary-text-color-color);
+  }
+
+  .timeline {
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(2.375rem, 2.83761vw, 4.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    /* margin: 5px; */
+    text-transform: uppercase;
+    /* -webkit-text-stroke: 1px rgba(212, 212, 212, 0.871); */
+    -webkit-text-fill-color: var(--primary-text-color-color);
+  }
+  .sidebar-first{
+    width: 20%;
+    /* background: rgb(49, 49, 49); */
+    order: 1;
+  }
+  .sidebar-second{ 
+    width: 20%;
+    order: 3;
+    /* background: rgb(49, 49, 49); */
+  }
+
+
+/* Footer stuff */
+
+  .footer h6 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(1.125, 1.7vw, 1.5rem);
+    color: #fff;
+    display: block;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.border-type {
+    padding: 11px 15px;
+    margin: 0;
+    border: 1px solid #ffffff;
+}
+
+#copyright {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+#footer-social-links {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.border-img {
+    padding: 11px 15px;
+    margin: 0;
+    border: 1px solid #ffffff;
+    float: left;
+    cursor: pointer;
+}
+.border-img img {
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #ffffff;
+}
+
+.border-img:hover {
+    background-color: var(--primary-link-color);
+}
+
+
+
+  /* For fonts */
+
+  /*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * interstate:
+ *   - http://typekit.com/eulas/00000000000000003b9ae7f7
+ *   - http://typekit.com/eulas/00000000000000003b9ae7fa
+ * interstate-compressed:
+ *   - http://typekit.com/eulas/00000000000000003b9ae802
+ *   - http://typekit.com/eulas/00000000000000003b9ae803
+ *   - http://typekit.com/eulas/00000000000000003b9ae804
+ *
+ * © 2009-2024 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-02-04 20:07:03 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=xbz3pjf&ht=tk&f=31144.31147.31155.31156.31157&a=15555062&app=typekit&e=css");
+
+@font-face {
+font-family:"interstate";
+src:url("https://use.typekit.net/af/20ad3a/00000000000000003b9ae7f7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/20ad3a/00000000000000003b9ae7f7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/20ad3a/00000000000000003b9ae7f7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"interstate";
+src:url("https://use.typekit.net/af/934a6d/00000000000000003b9ae7fa/27/l?subset_id=2&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/934a6d/00000000000000003b9ae7fa/27/d?subset_id=2&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/934a6d/00000000000000003b9ae7fa/27/a?subset_id=2&fvd=n8&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
+}
+
+@font-face {
+font-family:"interstate-compressed";
+src:url("https://use.typekit.net/af/939f76/00000000000000003b9ae802/27/l?subset_id=2&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/939f76/00000000000000003b9ae802/27/d?subset_id=2&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/939f76/00000000000000003b9ae802/27/a?subset_id=2&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"interstate-compressed";
+src:url("https://use.typekit.net/af/7a1026/00000000000000003b9ae803/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/7a1026/00000000000000003b9ae803/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/7a1026/00000000000000003b9ae803/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"interstate-compressed";
+src:url("https://use.typekit.net/af/4857cc/00000000000000003b9ae804/27/l?subset_id=2&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/4857cc/00000000000000003b9ae804/27/d?subset_id=2&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/4857cc/00000000000000003b9ae804/27/a?subset_id=2&fvd=n8&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
+}
+
+.tk-interstate { font-family: "interstate",sans-serif; }
+.tk-interstate-compressed { font-family: "interstate-compressed",sans-serif; }
+
+
+/* This is for work sheet */
+
+.grid-container {
+    grid-template-columns: auto auto auto;
+    /* padding: 20px; */
+    /* column-gap: 40px;
+    row-gap: 60px; */
+  }
+
+  .grid-item, .project-grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(1.375rem, 1.83761vw, 2.625rem);
+    font-weight: 300;
+    font-style: normal;
+    line-height:100%;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    /* -webkit-text-stroke: 1px rgba(19, 19, 19, 0.871); */
+    -webkit-text-fill-color: rgb(48, 48, 48);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    /*font-weight: 500;
+    /* font-size: 30px; */
+    text-align: left;
+    /* width: 100%;
+    height: 100%; */
+    line-height: 1.2;
+    box-shadow: 10px 10px var(--primary-link-color);
+    
+
+  }
+
+  .grid-item:hover {
+    background-color: rgb(158, 158, 158);
+    cursor: pointer;
+  }
+
+  .grid-container img {
+    width: 20%;
+  }
+
+  .grid-container, .project-grid-container p {
+    font-style: normal;
+    text-transform: none;
+    font-size: 1rem;
+    font-size: clamp(1.19rem, 1.141vw,2.375rem);
+    margin: 0;
+  }
+
+
+  .grid-container h4 {
+    font-style: normal;
+    text-transform: none;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+
+  /* This is for the project pages */
+
+  .project-grid-item {
+    box-shadow: none;
+  }
+
+  #projects {
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: var(--primary-text-color);
+  }
+
+  .project-header-images img {
+    /* display: grid; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+  }
+
+  .project-images img {
+    /* display: grid; */
+    width: 70%;
+    height: 70%;
+    /* display: flex; */
+    /* justify-content: center; */
+    object-fit: contain;
+  }
+
+  .project-images {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .project-grid-container h2 {
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-size: clamp(1.375rem, 4.83761vw, 5.625rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height:100%;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    text-transform:none;
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: rgba(255, 255, 255,0);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-link-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: -4px;
+  }
+
+  .project-desc p,ol {
+    font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: .8rem;
+    font-size: clamp(.8rem, 1.5vw, 2.3rem);
+    font-style: light;
+    line-height: 1.2;
+    font-weight: 200;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    /* margin-bottom: 5px; */
+    color: var(--primary-text-color)
+}
+
+.project-desc em,a {
+    color: var(--primary-link-color)
+}
+
+.cad-grid-item img {
+    /* display: grid; */
+    width: 70%;
+    height: 70%;
+    /* display: flex; */
+    /* justify-content: center; */
+    object-fit: contain;
+    border: .5px solid var(--primary-link-color);
+}
+
+.cad-grid-item {
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    border: 1px solid var(--primary-link-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #4e4e4e8d;
+    color: var(--primary-text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
