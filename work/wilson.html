@@ -1,0 +1,127 @@
+<!-- wilson -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="arjuns portfolio">
+    <title>My Work</title>
+    <link rel="stylesheet" href="../styles.css"/>
+  </head>
+  <body>
+    <header class="header">
+    <a href="../index.html">
+        <img src="../images/letter-a.png"/>
+    </a>
+    </header>
+    <div class="wrapper">
+        <section class="content">
+            <div class="columns">
+                <div class="main" id="projects">
+                    <a href="../index.html">
+                        <h5 class="nav-button">Home</h5>
+                    </a>
+                    <a href="../work.html">
+                        <h5 class="nav-button">Work</h5>
+                    </a>
+                    <h1 class="project">WILSON</h1>
+                    <div class="project-grid-container">
+                        
+                        <a href="./work/unity.html">
+                            <!-- <div class="project-grid-item">
+                                <p><strong>Role</strong>: Lead Designer</p>
+                                <p><strong>Duration</strong>: 6-9 months</p>
+                                <p><strong>Description</strong>: I was tasked with planning, designing and launching an atomic design system for Altiar Desktop Enterprise Applications</p>
+                            </div> -->
+                        </a>
+                        <div class="project-header-images">
+                            <img src="../images/guidepanels/inspire-UI.png">
+                        </div>
+                        <h2>Overview</h2>
+                        <div class="project-desc">
+                            <p>At Altair, we have been offering generative design to our customers since 2008.</p>
+                            <p>Altair Inspire, launched in 2009 brought forward a completely new way to optimize 3D models. This was the first user experience focused <a href="https://en.wikipedia.org/wiki/Topology_optimization" target="_blank">Topology Optimzation</a> software on the market. The philosophy was to place the power of generative design into the hands of anyone, persona-agnostic. Now designers could run optimizations and produce amazing results.</p>
+
+                        </div>
+                        <h2>My contribution</h2>
+                        <div class="project-desc">
+                            <p>I was tasked with creating a new way of capturing inputs for complex use cases. This involved both novel component design and brand new user-experience elements.</p>
+                        </div>
+                        <h2>Problem</h2>
+                        <div class="project-desc">
+                            <p>As Inspire grew in complexity, we found ourselves dealing with complicated inputs for several tools. Existing methods of capturing inputs were getting quite hairy.</p>
+                            <p>The "Guide-bar" introduced with Inspire was sufficient to capture inputs for most tools but became increasingly hard to handle for newer tools that required multiple inputs. It started causing fatigue.</p>
+                            <p>In some cases, the guidebar flowed across the entire width of the modeling window, forcing users to traverse this distance to complete a task.</p>
+                        </div>
+                        <div class="project-images">
+                            <img src="../images/guidepanels/guidepanel-ex1.jpg">
+                            <figcaption class="captions">A guidebar example from the Contacts tool.</figcaption>
+                        </div>
+                        <h2>Challenges</h2>
+                        <div class="project-desc">
+                            <!-- <p>Given the scope of this change that would affect multiple products in our portfolio, I wanted to understand the process.</p> -->
+                            <ol>
+                                <li>Understand and map typical and edge case workflows</li>
+                                <li>Improve the workflow while adhering to user expectations</li>
+                                <li>Design a scalable method that is easy to comprehend, intuitive and can be applied across workflows within the same system</li>
+                             </ol>
+                             <h2>Discovery</h2>
+                            <p>I took an example of a tool called “extrude” and laid out the flow. I used the anchoring principle to carefully choose expected defaults. This came from both my own experience as a 3D modeler and data from informal interviews with other designers.</p>
+                            <div class="project-images">
+                                <img src="/images/guidepanels/discovery.png">
+                            </div>
+                            <p>Next step was to perform some competitor analysis and I landed on a top left - bottom down approach to input capture. This changed the guidebar design to a guide panel one. I started exploring some options for information architecture.</p>
+                            <div class="project-images">
+                                <img src="/images/guidepanels/renditions-gp.jpg">
+                            </div>
+                            <p>Once required inputs are defined, additional options guide the user towards their final design. Here, I am looking at various sub-journeys that must be accommodated.</p>
+                            <p>After talking with all stakeholders, we narrowed our design to a panel that satisfied the following criteria:
+                                <ol>
+                                    <li>Clear primary workflow selection using tabs</li>
+                                    <li>Defined IA with group headers</li>
+                                    <li>Novel “entity selector” component</li>
+                                    <li>New methods for real time editing (toggle buttons instead of drop downs to save time)</li>
+                                    <li>Mini guide bar to keep familiarity</li>
+                                    <li>Natural progression from top left to bottom right</li>
+                                </ol></p>
+                            <div class="project-images" id="gp">
+                                <img src="../images/guidepanels/gp-final.jpg">
+                            </div>
+                        </div>
+                        <h2>Outcome</h2>
+                        <div class="project-desc">
+                            <p>The new guidepanel design was well received with over 20 teams adopting the design in first 6 months of delivery. During this redesign I also created a brand new entity selector component that made selecting multiple types of inputs in the same panel very easy.</p>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h5 class="nav-button">Top</h5>
+                    </a>
+                </div>
+                <aside class="sidebar-first"></aside>
+                <aside class="sidebar-second"></aside>
+            </div>
+        </section>
+        <footer id="footer-content">
+            <div id="copyright">
+                <h6 class="border-type">
+                    &#169 2024 Arjun Ajjampur
+                </h6>
+            </div>
+            <div id="footer-social-links">
+                <div id="social-wrapper">
+                    <div class="border-img">
+                        <a href="https://www.linkedin.com/in/arjunajjampur/" target="_blank">
+                            <img src="/images/linkedin.png">
+                        </a>
+                    </div>
+                    <div class="border-img">
+                        <a href="https://soundcloud.com/audioprone" target="_blank">
+                            <img src="/images/soundcloud-logo 1.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>
