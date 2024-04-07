@@ -53,39 +53,44 @@
                             <p>The "Guide-bar" introduced with Inspire was sufficient to capture inputs for most tools but became increasingly hard to handle for newer tools that required multiple inputs. It started causing fatigue.</p>
                             <p>In some cases, the guidebar flowed across the entire width of the modeling window, forcing users to traverse this distance to complete a task.</p>
                         </div>
-                        <h2>Solution</h2>
+                        <div class="project-images">
+                            <img src="../images/guidepanels/guidepanel-ex1.jpg">
+                            <figcaption class="captions">A guidebar example from the Contacts tool.</figcaption>
+                        </div>
+                        <h2>Challenges</h2>
                         <div class="project-desc">
-                            <p>The strategy was to build out a fully atomic design system and this involved 3 steps:</p>
+                            <!-- <p>Given the scope of this change that would affect multiple products in our portfolio, I wanted to understand the process.</p> -->
                             <ol>
-                                <li>Inventory existing components</li>
-                                <li>Build components starting from fundamental atoms</li>
-                                <li>Share design patterns with product teams</li>
+                                <li>Understand and map typical and edge case workflows</li>
+                                <li>Improve the workflow while adhering to user expectations</li>
+                                <li>Design a scalable method that is easy to comprehend, intuitive and can be applied across workflows within the same system</li>
                              </ol>
-                            <p>As a team of one, I built the fundamental components, starting with defining color palette using <a href="https://leonardocolor.io" target="_blank">Leornardocolor</a> created by Nate Baldwin.</p>
+                             <h2>Discovery</h2>
+                            <p>I took an example of a tool called “extrude” and laid out the flow. I used the anchoring principle to carefully choose expected defaults. This came from both my own experience as a 3D modeler and data from informal interviews with other designers.</p>
                             <div class="project-images">
-                                <img src="/images/unity/colors.jpg">
+                                <img src="/images/guidepanels/discovery.png">
                             </div>
-                            <p>Using figma variables, we defined global and alias tokens to ensure consistency</p>
+                            <p>Next step was to perform some competitor analysis and I landed on a top left - bottom down approach to input capture. This changed the guidebar design to a guide panel one. I started exploring some options for information architecture.</p>
                             <div class="project-images">
-                                <img src="/images/unity/tokens.jpg">
+                                <img src="/images/guidepanels/renditions-gp.jpg">
                             </div>
-                            <p>While building these components, we identified key product teams that were design evangelists. After setting up a formal ticketing, component request and fixing process, we rolled out the design system with a kickoff. It included an overview of the project, figma and its utility for our teams, the design system usage and guidelines.</p>
-                            <p>Using the atomic approach, I built all templates to be fully self-sufficient and easily updatable. The resulting pattern library was extensive for the first launch, with over 200 components and 400 variants.</p>
-                            <div class="project-images">
-                                <img src="/images/unity/component.png">
-                            </div>
-                            <p>This was a brand new initiative, and we were amazed with the response. We ensured the guides were clear and everyone was empowered to contribute to this new system.</p>
-                            <div class="project-images">
-                                <img src="../images/unity/guides.png">
+                            <p>Once required inputs are defined, additional options guide the user towards their final design. Here, I am looking at various sub-journeys that must be accommodated.</p>
+                            <p>After talking with all stakeholders, we narrowed our design to a panel that satisfied the following criteria:
+                                <ol>
+                                    <li>Clear primary workflow selection using tabs</li>
+                                    <li>Defined IA with group headers</li>
+                                    <li>Novel “entity selector” component</li>
+                                    <li>New methods for real time editing (toggle buttons instead of drop downs to save time)</li>
+                                    <li>Mini guide bar to keep familiarity</li>
+                                    <li>Natural progression from top left to bottom right</li>
+                                </ol></p>
+                            <div class="project-images" id="gp">
+                                <img src="../images/guidepanels/gp-final.jpg">
                             </div>
                         </div>
                         <h2>Outcome</h2>
                         <div class="project-desc">
-                            <p>The result of this new design system included increased sprint efficiency and velocity, higher organizational fluency, improved visibility for our team and last but not least quicker turnaround time for PMs and devs to implement powerful new features for our customers.</p>
-                        </div>
-                        <h2>Next</h2>
-                        <div class="project-desc">
-                            <p>We are currently working on a web design system that takes some learnings from our desktop exercise. In additon, the new version of Unity will have improved accessibility and be WCAG 2.0 compliant</p>
+                            <p>The new guidepanel design was well received with over 20 teams adopting the design in first 6 months of delivery. During this redesign I also created a brand new entity selector component that made selecting multiple types of inputs in the same panel very easy.</p>
                         </div>
                     </div>
                     <a href="#">
