@@ -712,6 +712,7 @@ font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
 
 .cad-grid-item {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .nav-button {
