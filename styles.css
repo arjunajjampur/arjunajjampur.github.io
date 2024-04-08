@@ -646,6 +646,7 @@ font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
     display: flex;
     justify-content: center;
     object-fit: contain;
+    margin: 0;
   }
 
   .project-images img {
@@ -712,7 +713,6 @@ font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
 
 .cad-grid-item {
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .nav-button {
@@ -735,6 +735,7 @@ html {
 .captions {
     font-size: 0.6em;
     font-weight: lighter;
+    text-align: center;
 }
 
 #gp {
