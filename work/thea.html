@@ -36,78 +36,87 @@
                         </a>
                         <div class="project-header-images">
                             <img src="../images/thea/studio-UI.png">
+                            <figcaption class="captions">Thea render inside Altair Inspire</figcaption>
                         </div>
                         <h2>Overview</h2>
                         <div class="project-desc">
-                            <p>Altair acquired Thea render in 2014 giving it access to industry leading visualization engine. Thea render is an award winning rendering and visualization product used by millions of designers.</p>
-                            <p>One of the convergences was to bring in the capabilities of Thea engine into Inspire Studio, our 3D modeling product.</p>
-
+                            <p>Altair acquired Thea render in 2014 giving it access to industry leading visualization engine. Thea render is an award winning rendering and visualization product used by designers, architects.</p>
+                            <p>One of the convergences after this acquisition was to bring in the capabilities of Thea into Inspire, our 3D modeling product.</p>
                         </div>
                         <h2>My contribution</h2>
                         <div class="project-desc">
                             <p>I was tasked with redesigning the post processing interface within Inspire Studio.</p>
-                            <p>The goal was to make it easy to compare, re-condition and animate frames on rendered images</p>
+                            <p>The goal was to make it easy to compare, re-condition and animate frames on rendered images.</p>
                         </div>
                         <h2>Inconsistencies</h2>
                         <div class="project-desc">
-                            <p>The initial implementation done after acquisition did not allow for enough user experience research. This led to a less than desired state.</p>
-                            <p>I started by taking a closer look at the UI and noting down these Inconsistencies.</p>
+                            <p>The initial implementation after acquisition did not give product temas enough time to conduct UX research. This led to a less than desired state.</p>
+                            <p>I started by taking a closer look at the UI and talking to several customers who were beta testers for this product. The findings were not surprising.</p>
                             <ol>
-                                <li>The "Darkroom" UI was nothing like our design system Unity. It did not feel like it was part of Altiar.</li>
-                                <li>IA was sometimes illogical.</li>
-                                <li>Iconography was incorrect.</li>
+                                <li>The "Darkroom" UI did not feel like it was part of Altiar family of products.</li>
+                                <li>IA was sometimes illogical and confusing. Checkboxes were sometimes on the right, and sometiems on the left.</li>
+                                <li>Iconography was inconsistent with other icons inside Inspire.</li>
                                 <li>Several post processing tools such as applying filters had a steep learning curve.</li>
                              </ol>
                         </div>
                         <div class="project-images">
                             <img src="../images/thea/incon-1.png">
+                            <figcaption class="captions">Some stlyling issues</figcaption>
                         </div>
                         <div class="project-images">
                             <img src="../images/thea/incon-2.png">
+                            <figcaption class="captions">Inconsistent Iconography</figcaption>
                         </div>
                         <div class="project-images">
                             <img src="../images/thea/incon-4.png">
+                            <figcaption class="captions">Relight timeline showing keyframe usage</figcaption>
                         </div>
                         <h2>JOURNEY MAP</h2>
                         <div class="project-desc">
-                            <p>I then laid out the journey map for a typical post processing workflow which included several sub flows such as render now,render later, relight (a way to change lighting after image is rendered).</p>
+                            <p>I then laid out the journey map for the entire post processing workflow which included several sub-flows such as render now,render later and relight (a way to change lighting after image is rendered).</p>
                             <div class="project-images">
                                 <img src="../images/thea/journey-map.png">
+                                <figcaption class="captions">Relight timeline showing keyframe usage</figcaption>
                             </div>
-                            <p>After testing a few layouts, I narrowed it down to a traditional post-processing style with the main image in front-left, with tools on the right and a timeline at the bottom.</p>
+                            <p>The first rendition was a more traditional post-processing style with the main image in front-left, with tools on the right and a timeline at the bottom.</p>
                         </div> 
                         <div class="project-images">
                             <img src="../images/thea/layouts.png">
+                            <figcaption class="captions">First pass at the new UI layout</figcaption>
                         </div>
                         <h2>A/B testing</h2>
                         <div class="project-desc">
-                            <p>To better understand the accessibility of rendered and in-process images, I had to redesign some image cards. These cards contained crucial information and we ran some tests to find the best solution with given set of constraints.</p>
+                            <p>To better understand the accessibility of rendered and in-process image thumbnails, I had to redesign some image cards. These cards contained crucial information such as aspect ratio, type of rendering (full vs progressive) and current stage. We ran some tests in <a href="https://maze.co" target="_blank">Maze</a> to find the optimal solution with given set of constraints.</p>
                             <div class="project-images" id="thea-resized">
                                 <img src="../images/thea/abtest.png">
+                                <figcaption class="captions">Some image cards for testing in Maze</figcaption>
                             </div>
                         </div>
                         <h2>IMAGE GALLERY</h2>
                         <div class="project-desc">
-                            <p>I proposed a brand new way of pre-applying and visualizing filters on the right side of the UI</p>
+                            <p>I found some interesting ideas from using image filtering on my apple device and I proposed a way of pre-applying and visualizing filters on the right side of the UI</p>
                             <p>This reduced the time required to find the right filter by 70%.</p>
                             <div class="project-images">
                                 <img src="../images/thea/image-gallery.png">
+                                <figcaption class="captions">Image thumbs with preapplied filters</figcaption>
                             </div>
                         </div>
                         <h2>RESULT</h2>
                         <div class="project-desc">
                             <p>The new UI included several improvements:
+                                <div class="project-images">
+                                    <img src="../images/thea/final-thea.png">
+                                    <figcaption class="captions">Final spec for Inspire Render Darkroom</figcaption>
+                                </div>
                                 <ol>
                                     <li>A new horizontal image gallery that shows both queued and completed image thumbnails.</li>
+                                    <li>Queued images pre-rendered in mesh view to let users verify camera angle.</li>
                                     <li>Three distinct tabs for local rendering, relight and network rendering.</li>
                                     <li>Post processing panel with pre-applied filter presets.</li>
                                     <li>13 new icons that align with our design system guidelines.</li>
                                 </ol>
                             </p>
                             <p><em>“The image gallery filtering is a game changer for us. I also love the quick preset for novice users” -- Dir. of PM, Renderinging technologies.</em></p>
-                            <div class="project-images">
-                                <img src="../images/thea/final-thea.png">
-                            </div>
                         </div>
                         <a href="#">
                         <h5 class="nav-button">Top</h5>
