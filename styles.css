@@ -731,6 +731,14 @@ font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
     color: var(--primary-text-color);
 }
 
+.nav-button-disabled {
+    color: rgba (158,199,97,.33);
+    border-color: rgba (158,199,97,.33);
+}
+.nav-button-disabled:hover {
+    cursor: none;
+} 
+
 html {
     scroll-behavior: smooth;
 }
