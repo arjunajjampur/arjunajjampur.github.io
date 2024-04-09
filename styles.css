@@ -732,12 +732,12 @@ font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
 }
 
 .nav-button-disabled {
-    border: 1px solid rgba (158,199,97,.33);
+    border: 1px solid var(--primary-link-color);
     padding-left: 10px;
     padding-right: 10px;
     display: inline-block;
-    color: rgba (158,199,97,.33);
     cursor: none;
+    opacity: 33%;
 }
 
 html {
