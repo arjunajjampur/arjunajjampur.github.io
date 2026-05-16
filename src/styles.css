@@ -357,11 +357,39 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 3rem;
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(15%);
+}
+
 .about-body {
   max-width: 680px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-photo {
+    width: 140px;
+    aspect-ratio: 1 / 1;
+    object-position: center 15%;
+  }
 }
 
 .about-body p {
