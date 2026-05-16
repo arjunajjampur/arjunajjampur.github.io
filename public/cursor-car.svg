@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="28" viewBox="0 0 56 28">
+  <!-- main body -->
+  <path d="M2 15 L5 10 L16 5 L38 5 L50 10 L53 15 L53 20 L2 20 Z" fill="#ff2d78"/>
+  <!-- cabin roof -->
+  <path d="M16 5 L20 1 L36 1 L40 5 Z" fill="#c01d58"/>
+  <!-- windshield -->
+  <path d="M21 4 L22 1 L34 1 L35 4 Z" fill="#00cfff" opacity="0.9"/>
+  <!-- rear quarter window -->
+  <path d="M16 5 L20 1 L21 4 L17 5 Z" fill="#00cfff" opacity="0.5"/>
+  <!-- door seam -->
+  <line x1="28" y1="5" x2="28" y2="18" stroke="#a01848" stroke-width="0.75"/>
+  <!-- front wheel -->
+  <circle cx="43" cy="22" r="5.5" fill="#0d0221" stroke="#00cfff" stroke-width="2"/>
+  <circle cx="43" cy="22" r="2" fill="#00cfff" opacity="0.6"/>
+  <!-- rear wheel -->
+  <circle cx="13" cy="22" r="5.5" fill="#0d0221" stroke="#00cfff" stroke-width="2"/>
+  <circle cx="13" cy="22" r="2" fill="#00cfff" opacity="0.6"/>
+  <!-- headlight -->
+  <rect x="51" y="13" width="3" height="5" rx="1" fill="#ffffaa"/>
+  <!-- tail light -->
+  <rect x="2" y="13" width="2" height="5" rx="1" fill="#ff6666"/>
+  <!-- side stripe -->
+  <line x1="5" y1="14" x2="51" y2="14" stroke="#a01848" stroke-width="1"/>
+</svg>

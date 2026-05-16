@@ -1,0 +1,40 @@
+:root {
+  --primary-color: rgba(39, 39, 39, 1);
+  --primary-text-color: rgb(237, 237, 237);
+  --secondary-color: rgba(254, 255, 244, 1);
+  --secondary-text-color: rgba(39, 39, 39, 1);
+  --primary-link-color: rgba(158, 199, 97, 1);
+  --primary-border-color: rgba(0, 0, 0, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: interstate, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
