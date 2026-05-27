@@ -153,7 +153,7 @@ export default function SyndicatedLoan() {
       next={{ to: '/work/ai-workshop', label: 'AI Prototyping Workshop' }}
     >
       <h1 className="cs-title">Syndicated Loan — Future State</h1>
-      <p className="cs-subtitle">Designing the end-to-end vision for one of global banking's most complex workflows.</p>
+      <p className="cs-subtitle">Designing the end-to-end vision for a multi-party payment and settlement workflow spanning hundreds of counterparties, approval chains, and transaction stages.</p>
 
       <div className="cs-nda-banner">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,6 +183,9 @@ export default function SyndicatedLoan() {
         <h2 className="cs-section-heading">Approach</h2>
         <div className="cs-body">
           <p>
+            This project was one of the first AI-native workflow designs at JPMorganChase Global Banking — establishing patterns for agentic, context-aware interfaces now being adopted across the firm.
+          </p>
+          <p>
             The work was informed by two inputs: outputs from a masterclass with MIT and extensive discovery work done by partner teams across the end-to-end journey. My role was to translate that research into something a senior stakeholder could see and react to.
           </p>
           <p>
@@ -196,6 +199,9 @@ export default function SyndicatedLoan() {
 
       <div className="cs-section">
         <h2 className="cs-section-heading">Deal Assist</h2>
+        <blockquote className="cs-blockquote cs-blockquote--lead">
+          Persistent AI context across a 6-stage financial transaction lifecycle — from deal origination through settlement and servicing.
+        </blockquote>
         <div className="cs-body">
           <p>
             Alongside the three core surfaces, I introduced <strong>Deal Assist</strong> — a persistent AI assistant embedded across every stage of the syndicated loan lifecycle. Unlike point-in-time tools, Deal Assist maintains deal context from origination through servicing, so each stage benefits from everything that came before it.
@@ -362,6 +368,9 @@ export default function SyndicatedLoan() {
       <div className="cs-section">
         <h2 className="cs-section-heading">Outcome</h2>
         <div className="cs-body">
+          <p>
+            The syndicated loan workflow spans dozens of counterparties per deal across a portfolio representing hundreds of billions in annual transaction volume — among the most operationally complex payment and settlement processes in institutional finance.
+          </p>
           <p>
             The future-state vision directly fed the MVP currently in development. I now act as a design consultant to the lead designer on that MVP, ensuring continuity between the vision and what gets built.
           </p>
