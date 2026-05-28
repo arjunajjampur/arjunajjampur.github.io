@@ -15,6 +15,36 @@ export default function AgenticDS() {
       <p className="cs-subtitle">What happens when you build a design system for an agent — not a human.</p>
 
       <div className="cs-section">
+        <h2 className="cs-section-heading">Beta Pilot</h2>
+        <div className="cs-stat-row">
+          <div className="cs-stat">
+            <span className="cs-stat-value">20</span>
+            <span className="cs-stat-label">Designers onboarded</span>
+          </div>
+          <div className="cs-stat">
+            <span className="cs-stat-value">4</span>
+            <span className="cs-stat-label">Lines of business</span>
+          </div>
+          <div className="cs-stat">
+            <span className="cs-stat-value">5 hrs</span>
+            <span className="cs-stat-label">Total onboarding time</span>
+          </div>
+          <div className="cs-stat">
+            <span className="cs-stat-value">4 steps</span>
+            <span className="cs-stat-label">Walkthrough</span>
+          </div>
+        </div>
+        <div className="cs-body">
+          <p>
+            Spanning Investment Banking, Markets, Payments, and Security Services. The structured 4-step walkthrough covers repo scaffold, data dictionary overview, and the two key workflows: intent-based AI-augmented design and the Figma-to-code plugin.
+          </p>
+          <p>
+            5 hours to go from zero to fluent across four different lines of business — with no terminal commands, no config files, and no design system knowledge required at the start.
+          </p>
+        </div>
+      </div>
+
+      <div className="cs-section">
         <h2 className="cs-section-heading">Overview</h2>
         <div className="cs-body">
           <p>
@@ -406,36 +436,6 @@ export default function AgenticDS() {
           </p>
           <p>
             That's not a better design system. That's a different kind of design system entirely.
-          </p>
-        </div>
-      </div>
-
-      <div className="cs-section">
-        <h2 className="cs-section-heading">Beta Pilot</h2>
-        <div className="cs-stat-row">
-          <div className="cs-stat">
-            <span className="cs-stat-value">20</span>
-            <span className="cs-stat-label">Designers onboarded</span>
-          </div>
-          <div className="cs-stat">
-            <span className="cs-stat-value">4</span>
-            <span className="cs-stat-label">Lines of business</span>
-          </div>
-          <div className="cs-stat">
-            <span className="cs-stat-value">5 hrs</span>
-            <span className="cs-stat-label">Total onboarding time</span>
-          </div>
-          <div className="cs-stat">
-            <span className="cs-stat-value">4 steps</span>
-            <span className="cs-stat-label">Walkthrough</span>
-          </div>
-        </div>
-        <div className="cs-body">
-          <p>
-            Spanning Investment Banking, Markets, Payments, and Security Services. The structured 4-step walkthrough covers repo scaffold, data dictionary overview, and the two key workflows: intent-based AI-augmented design and the Figma-to-code plugin.
-          </p>
-          <p>
-            5 hours to go from zero to fluent across four different lines of business — with no terminal commands, no config files, and no design system knowledge required at the start.
           </p>
         </div>
       </div>
