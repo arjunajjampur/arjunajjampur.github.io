@@ -21,7 +21,7 @@ export default function AgenticDS() {
             An AI-powered metadata pipeline that uses Claude Opus 4.6 to autonomously generate and maintain a machine-readable component data dictionary for JPMorganChase's design systems — powering component selection, code generation, design-to-code workflows, and governance checks.
           </p>
           <p>
-            <strong>281 components covered</strong> — schema-validated, with props, variants, design tokens, ARIA accessibility data, composition rules, and usage guidance. Currently in beta with Global Banking designers.
+            <strong>281 components covered</strong> — schema-validated, with props, variants, design tokens, ARIA accessibility data, composition rules, and usage guidance. Currently in beta with 20 designers across Investment Banking, Markets, Payments, and Security Services.
           </p>
         </div>
       </div>
@@ -411,10 +411,40 @@ export default function AgenticDS() {
       </div>
 
       <div className="cs-section">
+        <h2 className="cs-section-heading">Beta Pilot</h2>
+        <div className="cs-stat-row">
+          <div className="cs-stat">
+            <span className="cs-stat-value">20</span>
+            <span className="cs-stat-label">Designers onboarded</span>
+          </div>
+          <div className="cs-stat">
+            <span className="cs-stat-value">4</span>
+            <span className="cs-stat-label">Lines of business</span>
+          </div>
+          <div className="cs-stat">
+            <span className="cs-stat-value">5 hrs</span>
+            <span className="cs-stat-label">Total onboarding time</span>
+          </div>
+          <div className="cs-stat">
+            <span className="cs-stat-value">4 steps</span>
+            <span className="cs-stat-label">Walkthrough</span>
+          </div>
+        </div>
+        <div className="cs-body">
+          <p>
+            Spanning Investment Banking, Markets, Payments, and Security Services. The structured 4-step walkthrough covers repo scaffold, data dictionary overview, and the two key workflows: intent-based AI-augmented design and the Figma-to-code plugin.
+          </p>
+          <p>
+            5 hours to go from zero to fluent across four different lines of business — with no terminal commands, no config files, and no design system knowledge required at the start.
+          </p>
+        </div>
+      </div>
+
+      <div className="cs-section">
         <h2 className="cs-section-heading">What's Next</h2>
         <div className="cs-body">
           <p>
-            The system is currently in beta with a group of designers in Global Banking at JPMorganChase, with broader rollout to follow.
+            The beta is active across Global Banking at JPMorganChase, with broader rollout to follow.
           </p>
           <p>
             The next question is governance: how do you build an agentic system that stays trustworthy as the underlying components change? How do you prevent an agent from confidently generating code against a component that was deprecated last Tuesday? That's the problem I'm bringing to the <a href="https://www.saltdesignsystem.com" target="_blank" rel="noreferrer">Salt design system</a> team. The answer doesn't exist yet.

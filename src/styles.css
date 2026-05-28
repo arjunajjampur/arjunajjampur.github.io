@@ -1547,6 +1547,49 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
 }
 
+/* Beta pilot stats */
+.cs-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0 2rem;
+}
+
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-subtle);
+}
+
+.cs-stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cs-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
+
+@media (max-width: 600px) {
+  .cs-stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .cs-pipeline-node--agent,
 .cs-pipeline-node--output {
   /* intentionally unstyled — hover is the only active state */
