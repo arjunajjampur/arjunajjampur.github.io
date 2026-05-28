@@ -15,7 +15,7 @@ export default function AgenticDS() {
       <p className="cs-subtitle">What happens when you build a design system for an agent — not a human.</p>
 
       <div className="cs-section">
-        <h2 className="cs-section-heading">Beta Pilot</h2>
+        <h2 className="cs-section-heading">Beta Pilot — Now Live</h2>
         <div className="cs-stat-row">
           <div className="cs-stat">
             <span className="cs-stat-value">20</span>
