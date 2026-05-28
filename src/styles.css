@@ -82,6 +82,17 @@
   --accent-dark: #0099cc;
 }
 
+[data-theme="payments"] {
+  --bg:          #221812;
+  --bg-subtle:   #3A2206;
+  --border:      #6B4423;
+  --text:        #FAF8F2;
+  --text-2:      #D7BA9D;
+  --text-3:      #A89070;
+  --accent:      #C8681A;
+  --accent-dark: #8B4412;
+}
+
 [data-theme="retro"],
 [data-theme="retro"] a,
 [data-theme="retro"] button {

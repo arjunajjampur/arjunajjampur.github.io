@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Nav() {
-  const themes = ['dark', 'light', 'retro'];
-  const icons  = { dark: '☀', light: '◈', retro: '☾' };
-  const labels = { dark: 'light', light: 'retro', retro: 'dark' };
+  const themes = ['dark', 'light', 'retro', 'payments'];
+  const icons  = { dark: '☀', light: '◈', retro: '☾', payments: '◆' };
+  const labels = { dark: 'light', light: 'retro', retro: 'payments', payments: 'dark' };
 
   const [theme, setTheme] = useState(
     () => localStorage.getItem('theme') || 'dark'
