@@ -750,64 +750,6 @@ html {
     text-align: center;
 }
 
-/* Split-screen landing layout */
-.split-layout {
-  display: flex;
-  min-height: 100vh;
-}
-
-.split-left {
-  flex: 0 0 58%;
-  padding: 60px 60px 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-right: 1px solid rgba(237, 237, 237, 0.12);
-}
-
-.split-left .header {
-  height: 60px;
-  margin-bottom: 32px;
-}
-
-.split-left .author {
-  font-size: clamp(3rem, 6vw, 6rem);
-  margin-bottom: 32px;
-}
-
-.bio {
-  max-width: 560px;
-}
-
-.split-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-}
-
-.split-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  .split-layout {
-    flex-direction: column;
-  }
-  .split-left {
-    flex: none;
-    border-right: none;
-    border-bottom: 1px solid rgba(237, 237, 237, 0.12);
-    padding: 40px 32px 40px;
-  }
-  .split-right {
-    padding: 40px 32px 100px;
-    justify-content: flex-start;
-  }
-}
-
 #gp {
     width: 100%;
     justify-content: center;
