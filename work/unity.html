@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unity Design System — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">Unity Design System</h1>
+          <p class="cs-subtitle">Building a fully atomic design system at Altair from zero — and scaling it to 20+ product teams.</p>
+          <img class="cs-screenshot" src="../images/unity/unity/unity-variables.jpg" alt="Unity Design System inside Figma" />
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">200+</span>
+              <span class="cs-stat-label">Components at launch</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">400+</span>
+              <span class="cs-stat-label">Variants</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">20+</span>
+              <span class="cs-stat-label">Product teams served</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Overview</h2>
+          <div class="cs-body">
+            <p>Altair Design System, known internally as <em>Unity</em>, sits at the core of our organization, servicing a suite of software applications designed for simulation and high performance computing. It supports over 20 product teams by providing foundational elements and components, and acting as a platform for creating and maintaining design systems at Altair.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">My Contribution</h2>
+          <div class="cs-body">
+            <p>Strategy for design tokens and variable-based theming, lead designer for core components, pattern library, release notes, and contribution guides.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">The Problem</h2>
+          <div class="cs-body">
+            <p>When I joined the UI team in 2021, we were a small team of designers handling requests from around 5 product teams. Product managers were using a mix of prototyping tools — from Word to Balsamiq — to create and share customer journeys. Although we were closing tickets on time, we were unable to accomplish larger goals set for the team. There was no centralized component library, patterns were unclear, and usage was not fully documented.</p>
+            <p>From a business perspective, this was not good. We were efficiently inefficient. Our designs were neither scalable nor sharable, making it difficult to expand our reach to new products and teams.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Solution</h2>
+          <div class="cs-skill-icons">
+            <div class="cs-skill-icon-item">
+              <img src="../images/unity/atoms.png"
+                data-light="../images/unity/atoms.png"
+                data-dark="../images/unity/atoms_dark.png"
+                alt="Atoms" />
+              <span class="cs-skill-label">Atoms</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/unity/molecules.png"
+                data-light="../images/unity/molecules.png"
+                data-dark="../images/unity/molecules_dark.png"
+                alt="Molecules" />
+              <span class="cs-skill-label">Molecules</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/unity/organisms.png"
+                data-light="../images/unity/organisms.png"
+                data-dark="../images/unity/organisms_dark.png"
+                alt="Organisms" />
+              <span class="cs-skill-label">Organisms</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/unity/pages.png"
+                data-light="../images/unity/pages.png"
+                data-dark="../images/unity/pages_dark.png"
+                alt="Pages" />
+              <span class="cs-skill-label">Pages</span>
+            </div>
+          </div>
+          <div class="cs-body">
+            <p>The strategy was to build a fully atomic design system in three steps:</p>
+            <ol>
+              <li>Inventory existing components.</li>
+              <li>Build components starting from fundamental atoms.</li>
+              <li>Share design patterns with product teams and set them up for success.</li>
+            </ol>
+            <p>As a team of one, I started with the foundational elements — defining a color palette using Leonardo Color by Nate Baldwin.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/unity/unity/colors.jpg" alt="Colors from Leonardo" />
+          <div class="cs-body">
+            <p>Using Figma variables, we defined global and alias tokens to ensure consistency.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/unity/unity/tokens.jpg" alt="Variables and tokens" />
+          <div class="cs-body">
+            <p>While building these components, we identified design evangelists who were leading teams. After setting up a formal ticketing, component request, and fixing process, we rolled out the design system with a kickoff — including an overview of the project, Figma and its utility for our teams, and design system usage and guidelines.</p>
+            <p>Using the atomic approach, I built templates to be self-sufficient and easily updatable. The resulting pattern library was extensive for the first launch, with over <strong>200 components and 400 variants</strong>.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/unity/unity/component.png" alt="A guide bar component" />
+          <div class="cs-body">
+            <p>This was a brand new initiative, and the response was overwhelmingly positive. PMs were excited to dive in and build. We ensured the guides were clear and every designer was empowered to contribute.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/unity/unity/guides.png" alt="Release notes and guidelines" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Outcome</h2>
+          <div class="cs-body">
+            <p>The new design system increased our sprint efficiency, improved organizational fluency, and expanded our visibility as the core GUI team. Last but not least, it enabled quicker turnaround times for PMs and devs to implement powerful new features for our customers.</p>
+          </div>
+        </div>
+
+        <nav class="cs-nav">
+          <a href="llm-assistant.html" class="cs-nav-link">
+            <span class="cs-nav-dir">Prev</span>
+            <span class="cs-nav-label">Design System Compass</span>
+          </a>
+          <a href="guidepanels.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Inspire Guide Panels</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>

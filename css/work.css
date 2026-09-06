@@ -1,0 +1,556 @@
+/* ── Work listing ────────────────────────────────────── */
+.work-intro {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 120px;
+}
+
+.work-meta {
+  display: flex;
+  gap: 40px;
+}
+
+.work-meta-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.work-meta-value {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--fg);
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.work-meta-label {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  color: var(--fg);
+  opacity: 0.6;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 0;
+  border-top: 1px solid var(--accent);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.work-item:hover { opacity: 0.65; }
+
+.work-item-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.work-item-title {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--fg);
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.work-item-tags {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.work-item-tag {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 2px 6px;
+  white-space: nowrap;
+  line-height: 1.4;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.work-item-desc {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: var(--fg);
+  line-height: 1.5;
+  opacity: 0.8;
+  transition: color 0.2s ease;
+}
+
+.work-list-last { border-bottom: 1px solid var(--accent); }
+
+/* ── Case study layout ───────────────────────────────── */
+.cs-content {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 120px;
+}
+
+/* ── Impact bar (top of every case study) ────────────── */
+.cs-impact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.cs-title {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--fg);
+  line-height: 1.1;
+  transition: color 0.2s ease;
+}
+
+.cs-subtitle {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  color: var(--fg);
+  line-height: 1.5;
+  opacity: 0.8;
+  transition: color 0.2s ease;
+}
+
+.cs-stat-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cs-stat-value {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--fg);
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.cs-stat-label {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 11px;
+  color: var(--fg);
+  opacity: 0.6;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+.cs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-section-heading {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--fg);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.cs-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cs-body p, .cs-body li {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+.cs-body strong {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+}
+
+.cs-body ol, .cs-body ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cs-body a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Blockquote ──────────────────────────────────────── */
+.cs-blockquote {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--fg);
+  line-height: 1.4;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin: 0;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ── Table ───────────────────────────────────────────── */
+.cs-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+.cs-table th {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid var(--accent);
+  opacity: 0.6;
+}
+
+.cs-table td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--accent);
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+.cs-table td:last-child, .cs-table th:last-child { padding-right: 0; }
+
+.cs-table-total td {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+}
+
+/* ── Case study logo ─────────────────────────────────── */
+.cs-logo {
+  width: auto;
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Case study screenshot ───────────────────────────── */
+.cs-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-screenshot--half {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── NDA banner ──────────────────────────────────────── */
+.cs-nda {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.cs-nda p {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.cs-nda strong {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+}
+
+/* ── Layers diagram ──────────────────────────────────── */
+.cs-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cs-layer {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border: 1px solid var(--accent);
+  transition: border-color 0.2s ease;
+}
+
+.cs-layer-num {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--fg);
+  opacity: 0.4;
+  flex-shrink: 0;
+  padding-top: 2px;
+  transition: color 0.2s ease;
+}
+
+.cs-layer-title {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+.cs-layer-desc {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: var(--fg);
+  opacity: 0.7;
+  transition: color 0.2s ease;
+}
+
+.cs-layer--top { opacity: 1; }
+.cs-layer--top .cs-layer-num { opacity: 1; }
+
+/* ── Deal Assist stages ──────────────────────────────── */
+.cs-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cs-stage {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--accent);
+  align-items: baseline;
+}
+
+.cs-stage:last-child { border-bottom: 1px solid var(--accent); }
+
+.cs-stage-num {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--fg);
+  opacity: 0.4;
+  flex-shrink: 0;
+  width: 60px;
+  transition: color 0.2s ease;
+}
+
+.cs-stage-name {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--fg);
+  flex-shrink: 0;
+  width: 140px;
+  transition: color 0.2s ease;
+}
+
+.cs-stage-desc {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.5;
+  opacity: 0.8;
+  transition: color 0.2s ease;
+}
+
+/* ── Prev / Next navigation ──────────────────────────── */
+.cs-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  border-top: 1px solid var(--accent);
+  transition: border-color 0.2s ease;
+}
+
+.cs-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.cs-nav-dir {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  color: var(--fg);
+  opacity: 0.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.cs-nav-label {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+.cs-nav-link:hover .cs-nav-label { opacity: 0.65; }
+.cs-nav-link--next { text-align: right; }
+
+/* ── Skill icons ─────────────────────────────────────── */
+.cs-skill-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+}
+
+.cs-skill-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs-skill-icon-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+.cs-skill-icon-item .cs-skill-label {
+  font-family: 'PPValveMedium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--accent);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 780px) {
+  .cs-skill-icon-item .cs-skill-label { font-size: 13px; }
+}
+
+@media (max-width: 500px) {
+  .cs-skill-icon-item .cs-skill-label { font-size: 11px; }
+}
+
+/* ── Skill table ─────────────────────────────────────── */
+.cs-label {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  color: var(--fg);
+  opacity: 0.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+/* ── Image grid ──────────────────────────────────────── */
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.cs-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+@media (max-width: 780px) {
+  .cs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .cs-grid { grid-template-columns: 1fr; }
+  .cs-grid img { height: 200px; }
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 780px) {
+  .work-intro, .cs-content { width: 376px; }
+  .work-meta { gap: 24px; flex-wrap: wrap; }
+  .cs-stat-row { gap: 24px; }
+  .cs-stage { flex-direction: column; gap: 4px; }
+  .cs-stage-num, .cs-stage-name { width: auto; }
+}
+
+@media (max-width: 500px) {
+  .work-intro, .cs-content { width: 276px; }
+  .cs-title { font-size: 24px; }
+  .cs-subtitle { font-size: 16px; }
+  .work-item-header { flex-direction: column; gap: 8px; }
+  .work-item-tags { justify-content: flex-start; }
+}

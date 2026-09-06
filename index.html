@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    /* ── Hi logo (width-anchored on home) ─────────────── */
+    .hi-logo {
+      display: block;
+      width: 45px;
+      height: auto;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+
+    .hi-logo img { width: 100%; height: auto; }
+
+    /* ── Cards section ───────────────────────────────── */
+    .cards-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 768px;
+    }
+
+    /* ── Cards row ───────────────────────────────────── */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* ── Card ────────────────────────────────────────── */
+    .card-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .card-item:hover .card-img { transform: translateY(-4px); }
+
+    .card-label {
+      font-family: 'PPValve', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: var(--fg);
+      white-space: nowrap;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      transition: color 0.2s ease;
+    }
+
+    .card-img {
+      width: 180px;
+      height: 180px;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 780px) {
+      .cards-section { width: 376px; }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hi-logo { width: 35px; }
+      .cards-section { width: 276px; }
+      .cards { grid-template-columns: repeat(2, 130px); }
+      .card-img { width: 130px; height: 130px; }
+      .card-label { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <a href="index.html" class="hi-logo" aria-label="Home">
+          <img src="images/hi.svg" alt="hi" />
+        </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cards-section">
+        <nav class="cards" aria-label="Navigation">
+
+          <a class="card-item" href="about.html" aria-label="About">
+            <img class="card-img" src="images/about.png"
+              data-light="images/about.png" data-dark="images/about_dark.png" alt="" aria-hidden="true" />
+            <span class="card-label">about</span>
+          </a>
+
+          <a class="card-item" href="work.html" aria-label="Work">
+            <img class="card-img" src="images/work.png"
+              data-light="images/work.png" data-dark="images/work_dark.png" alt="" aria-hidden="true" />
+            <span class="card-label">work</span>
+          </a>
+
+          <a class="card-item" href="play.html" aria-label="Play">
+            <img class="card-img" src="images/play.png"
+              data-light="images/play.png" data-dark="images/play_dark.png" alt="" aria-hidden="true" />
+            <span class="card-label">play</span>
+          </a>
+
+          <a class="card-item" href="contact.html" aria-label="Contact">
+            <img class="card-img" src="images/contact.png"
+              data-light="images/contact.png" data-dark="images/contact_dark.png" alt="" aria-hidden="true" />
+            <span class="card-label">contact</span>
+          </a>
+
+        </nav>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

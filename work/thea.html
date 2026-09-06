@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thea Render — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">Thea Render</h1>
+          <p class="cs-subtitle">Redesigning the image post-processing workflow for Altair Inspire — A/B tested in Maze, 70% filter time reduction.</p>
+          <img class="cs-screenshot" src="../images/thea/studio-UI.png" alt="Thea render inside Altair Inspire" />
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">70%</span>
+              <span class="cs-stat-label">Filter time reduction</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">13</span>
+              <span class="cs-stat-label">New icons aligned with design system</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">Maze</span>
+              <span class="cs-stat-label">A/B tested image card variants</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Overview</h2>
+          <div class="cs-body">
+            <p>Altair acquired Thea Render in 2014, gaining access to an industry-leading visualization engine. Thea Render is an award-winning rendering and visualization product used by designers and architects.</p>
+            <p>One of the convergences after this acquisition was to bring the capabilities of Thea into Inspire, our 3D modeling product. I was tasked with redesigning the post-processing interface for what we called "Darkroom" within Inspire — making it easy to compare, re-condition, and animate frames on rendered images.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Inconsistencies</h2>
+          <div class="cs-body">
+            <p>The initial implementation after acquisition did not give product teams enough time to conduct UX research. I started by taking a closer look at the UI and talking to several customers who were beta testers. The findings were not surprising:</p>
+            <ol>
+              <li>The "Darkroom" UI did not feel like it was part of the Altair family of products.</li>
+              <li>Information architecture was sometimes illogical and confusing. Checkboxes were sometimes on the right, and sometimes on the left.</li>
+              <li>Iconography was inconsistent with other icons inside Inspire.</li>
+              <li>Several post-processing tools, such as applying filters, had a steep learning curve.</li>
+            </ol>
+          </div>
+          <img class="cs-screenshot" src="../images/thea/incon-1.png" alt="Some styling issues" />
+          <img class="cs-screenshot" src="../images/thea/incon-2.png" alt="Inconsistent iconography" />
+          <img class="cs-screenshot" src="../images/thea/incon-4.png" alt="Relight timeline showing keyframe usage" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Journey Map</h2>
+          <div class="cs-body">
+            <p>I laid out the journey map for the entire post-processing workflow, which included several sub-flows such as render now, render later, and relight (a way to change lighting after an image is rendered).</p>
+          </div>
+          <img class="cs-screenshot" src="../images/thea/journey-map.png" alt="Journey map for post-processing workflow" />
+          <div class="cs-body">
+            <p>The first rendition was a more traditional post-processing style with the main image in the front-left, tools on the right, and a timeline at the bottom.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/thea/layouts.png" alt="First pass at the new UI layout" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">A/B Testing</h2>
+          <div class="cs-body">
+            <p>To better understand the accessibility of rendered and in-process image thumbnails, I redesigned some image cards. These cards contained crucial information such as aspect ratio, type of rendering (full vs. progressive), and current stage. We ran tests in Maze to find the optimal solution given a set of constraints.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/thea/abtest.png" alt="Image cards for testing in Maze" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Image Gallery</h2>
+          <div class="cs-body">
+            <p>I found interesting ideas from image filtering on Apple devices and proposed a way of pre-applying and visualizing filters on the right side of the UI. This <strong>reduced the time required to find the right filter by 70%</strong>.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/thea/image-gallery.png" alt="Image thumbnails with pre-applied filters" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Result</h2>
+          <div class="cs-body">
+            <p>The new UI included several improvements:</p>
+          </div>
+          <div class="cs-skill-icons">
+            <div class="cs-skill-icon-item">
+              <img src="../images/thea/filtering.png"
+                data-light="../images/thea/filtering.png"
+                data-dark="../images/thea/filtering_dark.png"
+                alt="Filtering" />
+              <span class="cs-skill-label">Filtering</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/thea/gallery.png"
+                data-light="../images/thea/gallery.png"
+                data-dark="../images/thea/gallery_dark.png"
+                alt="Gallery" />
+              <span class="cs-skill-label">Gallery</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/thea/network.png"
+                data-light="../images/thea/network.png"
+                data-dark="../images/thea/network_dark.png"
+                alt="Network" />
+              <span class="cs-skill-label">Network</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/thea/ab.png"
+                data-light="../images/thea/ab.png"
+                data-dark="../images/thea/ab_dark.png"
+                alt="A/B" />
+              <span class="cs-skill-label">A/B</span>
+            </div>
+          </div>
+          <div class="cs-body">
+            <ol>
+              <li>A new horizontal image gallery showing both queued and completed image thumbnails.</li>
+              <li>Queued images pre-rendered in mesh view to let users verify camera angle.</li>
+              <li>Three distinct tabs for local rendering, relight, and network rendering.</li>
+              <li>Post-processing panel with pre-applied filter presets.</li>
+              <li>13 new icons aligned with design system guidelines.</li>
+            </ol>
+            <blockquote class="cs-blockquote">The image gallery filtering is a game changer for us. I also love the quick preset for novice users.<br><span style="font-size:0.75em;opacity:0.6;font-weight:400">— Dir. of PM, Rendering Technologies</span></blockquote>
+          </div>
+          <img class="cs-screenshot" src="../images/thea/final-thea.png" alt="Final spec for Inspire Render Darkroom" />
+        </div>
+
+        <nav class="cs-nav">
+          <a href="guidepanels.html" class="cs-nav-link">
+            <span class="cs-nav-dir">Prev</span>
+            <span class="cs-nav-label">Inspire Guide Panels</span>
+          </a>
+          <a href="wilson.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Wilson Golf Driver</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>

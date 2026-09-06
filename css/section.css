@@ -1,0 +1,159 @@
+/* Styles shared by all section pages (about, work, play, contact) */
+
+/* ── Hi logo (height-anchored for breadcrumb alignment) ── */
+.hi-logo {
+  display: block;
+  height: 36px;
+  width: auto;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.hi-logo img {
+  height: 100%;
+  width: auto;
+}
+
+/* ── Breadcrumb ──────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-slash {
+  font-family: 'PPValveMedium', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Content area ────────────────────────────────────── */
+.content {
+  width: 768px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 36px;
+  padding-bottom: 120px;
+}
+
+/* ── About journey image ─────────────────────────────── */
+.about-journey-wrap {
+  flex-shrink: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.about-journey {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-journey-caption {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--fg);
+  opacity: 0.6;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+/* ── About text column ───────────────────────────────── */
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.about-text p {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+.about-text p strong {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* ── Contact icons ───────────────────────────────────── */
+.contact-icons {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.contact-icon-item:hover { opacity: 0.65; }
+
+.contact-icon-item--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.contact-icon-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-icon-label {
+  font-family: 'PPValveMedium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--accent);
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 780px) {
+  .content { width: 376px; gap: 24px; }
+  .about-journey-wrap { width: 140px; }
+}
+
+@media (max-width: 500px) {
+  .hi-logo { height: 24px; }
+  .breadcrumb-slash { font-size: 24px; }
+  .breadcrumb-img { height: 24px; }
+  .content { width: 276px; flex-direction: column; gap: 20px; }
+  .about-journey-wrap { width: 100%; flex-direction: row; justify-content: flex-start; gap: 16px; }
+  .about-journey { width: 100px; flex-shrink: 0; }
+  .about-journey-caption { text-align: left; }
+  .about-text p { font-size: 14px; }
+}

@@ -1,0 +1,194 @@
+/* ── Resume layout ───────────────────────────────────── */
+.resume {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 120px;
+}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.resume-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.resume-name {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  color: var(--fg);
+  line-height: 1.1;
+  transition: color 0.2s ease;
+}
+
+.resume-summary {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: var(--fg);
+  line-height: 1.6;
+  opacity: 0.8;
+  transition: color 0.2s ease;
+}
+
+/* ── Sections ─────────────────────────────────────────── */
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resume-section-heading {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--fg);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+/* ── Role ─────────────────────────────────────────────── */
+.resume-role {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--accent);
+  transition: border-color 0.2s ease;
+}
+
+.resume-role-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.resume-role-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resume-role-title {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--fg);
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.resume-role-company {
+  font-family: 'PPValveMedium', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--fg);
+  opacity: 0.6;
+  transition: color 0.2s ease;
+}
+
+.resume-role-date {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  color: var(--fg);
+  opacity: 0.4;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.resume-role-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 16px;
+}
+
+.resume-role-bullets li {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  color: var(--fg);
+  line-height: 1.6;
+  opacity: 0.85;
+  transition: color 0.2s ease;
+}
+
+/* ── Tools ────────────────────────────────────────────── */
+.resume-tools {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  color: var(--fg);
+  line-height: 1.7;
+  opacity: 0.8;
+  transition: color 0.2s ease;
+}
+
+/* ── Education ────────────────────────────────────────── */
+.resume-edu-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--accent);
+  transition: border-color 0.2s ease;
+}
+
+.resume-edu-row:last-child {
+  border-bottom: 1px solid var(--accent);
+}
+
+.resume-edu-degree {
+  font-family: 'PPValve', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--fg);
+  flex-shrink: 0;
+  width: 180px;
+  transition: color 0.2s ease;
+}
+
+.resume-edu-school {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: var(--fg);
+  opacity: 0.8;
+  flex: 1;
+  transition: color 0.2s ease;
+}
+
+.resume-edu-year {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  color: var(--fg);
+  opacity: 0.4;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 780px) {
+  .resume { width: 376px; }
+  .resume-role-header { flex-direction: column; gap: 4px; }
+}
+
+@media (max-width: 500px) {
+  .resume { width: 276px; }
+  .resume-name { font-size: 28px; }
+  .resume-edu-row { flex-direction: column; gap: 4px; }
+  .resume-edu-degree { width: auto; }
+}

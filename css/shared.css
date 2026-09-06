@@ -1,0 +1,224 @@
+/* ── Fonts ───────────────────────────────────────────── */
+@font-face {
+  font-family: 'PPValve';
+  src: url('../fonts/PPValve-PlainExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPValveMedium';
+  src: url('../fonts/PPValve-PlainMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPValveLight';
+  src: url('../fonts/PPValve-PlainExtralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPValveStencil';
+  src: url('../fonts/PPValve-StencilExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Theme variables ─────────────────────────────────── */
+:root {
+  --bg: #eeedec;
+  --fg: #000000;
+  --accent: #242424;
+  --glass-bg: rgba(238, 237, 236, 0.60);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #2f2f2f;
+    --fg: #eeedec;
+    --accent: #eeedec;
+    --glass-bg: rgba(47, 47, 47, 0.60);
+  }
+}
+
+[data-theme="dark"]  { --bg: #2f2f2f; --fg: #eeedec; --accent: #eeedec; --glass-bg: rgba(47, 47, 47, 0.60); }
+[data-theme="light"] { --bg: #eeedec; --fg: #000000; --accent: #242424; --glass-bg: rgba(238, 237, 236, 0.60); }
+
+/* ── Reset ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+  min-height: 100vh;
+  transition: background-color 0.2s ease;
+}
+
+/* ── Layout ──────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  padding: 0 120px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 860px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ── Header row ──────────────────────────────────────── */
+.header-row {
+  width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 18px 0;
+}
+
+.header-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: -1;
+}
+
+/* ── Hi logo ─────────────────────────────────────────── */
+.hi-logo img {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hi-logo img {
+    filter: brightness(0) invert(1) brightness(0.933);
+  }
+}
+[data-theme="dark"]  .hi-logo img { filter: brightness(0) invert(1) brightness(0.933); }
+[data-theme="light"] .hi-logo img { filter: none; }
+
+/* ── Theme toggle ────────────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent);
+  white-space: nowrap;
+  line-height: 1;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0 18px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.footer-divider {
+  width: 768px;
+  height: 1px;
+  background: var(--accent);
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img { display: block; object-fit: contain; }
+
+.footer-logo--figma img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1) brightness(0.141);
+}
+
+.footer-logo--claude img {
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: multiply;
+}
+
+.footer-sep  { font-size: 16px; color: var(--accent); line-height: 1; opacity: 0.4; transition: color 0.2s ease; }
+.footer-plus { font-size: 16px; color: var(--accent); line-height: 1; transition: color 0.2s ease; }
+
+.footer-year {
+  font-family: 'PPValveStencil', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent);
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .footer-logo--figma img { filter: brightness(0) invert(1) brightness(0.933); }
+  :root:not([data-theme="light"]) .footer-logo--claude img { mix-blend-mode: normal; filter: brightness(0) invert(1) brightness(0.933); }
+}
+[data-theme="dark"]  .footer-logo--figma img  { filter: brightness(0) invert(1) brightness(0.933); }
+[data-theme="dark"]  .footer-logo--claude img  { mix-blend-mode: normal; filter: brightness(0) invert(1) brightness(0.933); }
+[data-theme="light"] .footer-logo--figma img   { filter: brightness(0) invert(1) brightness(0.141); }
+[data-theme="light"] .footer-logo--claude img  { mix-blend-mode: multiply; filter: none; }
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page { padding: 0 48px 56px; }
+}
+
+@media (max-width: 780px) {
+  .header-row  { width: 376px; }
+  .footer-divider { width: 376px; }
+}
+
+@media (max-width: 500px) {
+  .page { padding: 0 24px 48px; }
+  .inner { gap: 36px; }
+  .header-row  { width: 276px; }
+  .footer-divider { width: 276px; }
+}

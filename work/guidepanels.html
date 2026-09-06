@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inspire Guide Panels — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">Inspire Guide Panels</h1>
+          <p class="cs-subtitle">A novel component to capture complex multi-step inputs in engineering software — adopted by 9 teams in six months.</p>
+          <img class="cs-screenshot" src="../images/guidepanels/inspire-UI.png" alt="Inspire user interface" />
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">9</span>
+              <span class="cs-stat-label">Teams adopted in 6 months</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">1</span>
+              <span class="cs-stat-label">New entity selector component</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">Multi</span>
+              <span class="cs-stat-label">Product portfolio coverage</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Overview</h2>
+          <div class="cs-body">
+            <p>Altair Inspire, launched in 2009, brought forward a completely new way to optimize engineering models. This was the first user-experience-focused topology optimization software on the market. Its goal was simple: place the power of generative design into the hands of anyone, persona-agnostic.</p>
+            <p>Previously, mechanical engineers had the formal authority to optimize designs as it required domain expertise, and optimization came after prototyping and testing. Inspire was shaking things up by bringing optimization earlier in the design pipeline.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">My Contribution</h2>
+          <div class="cs-body">
+            <p>I was tasked with creating a new way of capturing inputs — involving both novel component design and brand new user-experience elements that would be inherited across multiple products in our portfolio.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">The Problem</h2>
+          <div class="cs-body">
+            <p>As Inspire grew in complexity, we found ourselves dealing with input fatigue for several tools. Existing methods of capturing inputs were getting quite unwieldy.</p>
+            <p>The "Guide-bar" introduced with Inspire was sufficient for most tools but became increasingly hard to handle for newer tools that required multiple inputs. In some cases, the guidebar flowed across the entire width of the modeling window, forcing users to traverse this distance to complete a task.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/guidepanels/guidepanel-ex1.jpg" alt="A guidebar example from the Contacts tool" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Challenges</h2>
+          <div class="cs-body">
+            <p>This new method would be inherited across multiple products in our portfolio, requiring that we:</p>
+            <ol>
+              <li>Understand and map typical and edge-case workflows.</li>
+              <li>Improve the workflow while adhering to user expectations.</li>
+              <li>Design a scalable method that is easy to comprehend, intuitive, and can be applied across workflows and products.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Discovery</h2>
+          <div class="cs-body">
+            <p>I took an example of a tool called "extrude" and laid out the full flow. I used the anchoring principle to carefully choose expected defaults — informed by both my own experience as a 3D modeler and data from informal interviews with other designers.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/guidepanels/discovery.png" alt="Mapping user journey for extrude" />
+          <div class="cs-body">
+            <p>I then performed competitor analysis and landed on a top-left to bottom-down approach versus the existing left-to-right workflow. This changed the guidebar design to a panel. I started exploring options for information architecture.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/guidepanels/renditions-gp.jpg" alt="Mocks for IA inside guide panel" />
+          <div class="cs-body">
+            <p>After talking with all stakeholders, we narrowed our design to a panel that satisfied these criteria:</p>
+            <ol>
+              <li>Clear primary workflow selection using tabs.</li>
+              <li>Defined IA with group headers.</li>
+              <li>Novel "entity selector" component.</li>
+              <li>New methods for real-time editing (toggle buttons instead of dropdowns to save time).</li>
+              <li>Mini guide bar to maintain familiarity.</li>
+              <li>Natural progression from top-left to bottom-right.</li>
+            </ol>
+          </div>
+          <img class="cs-screenshot" src="../images/guidepanels/gp-final.jpg" alt="Final spec of guide panel including a new entity selector component" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Outcome</h2>
+          <div class="cs-body">
+            <p>The new guide panel design was well received, with <strong>over 9 teams adopting the design in the first 6 months</strong> of delivery. During this redesign I also created a brand new entity selector component that made selecting multiple types of inputs in the same panel intuitive.</p>
+          </div>
+        </div>
+
+        <nav class="cs-nav">
+          <a href="unity.html" class="cs-nav-link">
+            <span class="cs-nav-dir">Prev</span>
+            <span class="cs-nav-label">Unity Design System</span>
+          </a>
+          <a href="thea.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Thea Render</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>

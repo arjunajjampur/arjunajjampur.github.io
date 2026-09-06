@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic Design System — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">Agentic Design System</h1>
+          <p class="cs-subtitle">What happens when you build a design system for an agent — not a human.</p>
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">281</span>
+              <span class="cs-stat-label">Components covered</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">85+</span>
+              <span class="cs-stat-label">Designers onboarded</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">4</span>
+              <span class="cs-stat-label">Lines of business</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">&lt;5 min</span>
+              <span class="cs-stat-label">End-to-end setup, one npx command</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Overview</h2>
+          <div class="cs-body">
+            <p>An AI-powered metadata pipeline that autonomously generates and maintains a machine-readable component data dictionary for JPMorganChase's design systems — powering component selection, code generation, design-to-code workflows, and governance checks.</p>
+            <p><strong>281 components covered</strong> — schema-validated, with props, variants, design tokens, ARIA accessibility data, composition rules, and usage guidance. In active use with 85+ designers across Investment Banking, Markets, Payments, and Security Services.</p>
+            <p>The structured 4-step walkthrough covers repo scaffold, data dictionary overview, and two key workflows: intent-based AI-augmented design and a Figma-to-code plugin. Under 2 minutes to go from zero to set up — with no terminal commands, no config files, and no design system knowledge required at the start.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">The Problem</h2>
+          <div class="cs-body">
+            <p>At enterprise scale, design system documentation is always incomplete — not because teams are lazy, but because keeping it current is expensive. A single component documented at real depth — props, tokens, ARIA metadata, composition rules, anti-patterns — takes hours. Multiply that by 281 components, then multiply it again every time something changes.</p>
+            <p>The documentation debt compounds silently until the system stops being trusted. I started asking a different question: <strong>what if an AI agent could maintain that documentation autonomously?</strong></p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Architecture</h2>
+          <div class="cs-body">
+            <p>Three principles govern the system:</p>
+            <p><strong>Data-dictionary-first mandate</strong> — agents must read local JSON metadata before generating any UI code. No guessing props or tokens.</p>
+            <p><strong>Layered system</strong> — Salt (core) → enterprise pattern layer → Global Banking overrides, with layer policies enforcing sizing rules, required states, anti-patterns, and token usage. GB override rules are highest priority and supersede all lower layers.</p>
+            <p><strong>Anti-hallucination protocol</strong> — if a component, prop, or token isn't documented, the agent stops and flags it rather than guessing.</p>
+          </div>
+          <div class="cs-layers">
+            <div class="cs-layer cs-layer--top">
+              <span class="cs-layer-num">04</span>
+              <div>
+                <div class="cs-layer-title">Global Banking Overrides</div>
+                <div class="cs-layer-desc">Highest priority — supersedes all layers. Sentence case, one solid button per view, semantic icons required.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">03</span>
+              <div>
+                <div class="cs-layer-title">Generic UI Guidance</div>
+                <div class="cs-layer-desc">Content design, WCAG 2.1 AA accessibility, best practices — design-system-agnostic.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">02</span>
+              <div>
+                <div class="cs-layer-title">Enterprise Pattern Layer</div>
+                <div class="cs-layer-desc">Enterprise components, responsive layouts, charts, data visualizations.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">01</span>
+              <div>
+                <div class="cs-layer-title">Salt — Foundation</div>
+                <div class="cs-layer-desc">Core components, design tokens, base patterns. Open source.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">How It Was Built</h2>
+          <div class="cs-body">
+            <p>Built solo, outside core responsibilities, across six phases.</p>
+          </div>
+          <div class="cs-stages">
+            <div class="cs-stage">
+              <span class="cs-stage-num">Phase 01</span>
+              <span class="cs-stage-name">Docs-only baseline</span>
+              <span class="cs-stage-desc">Agent fetched data from Salt Storybook and the documentation site. Generated 61 schema-validated JSON files. 100% validation pass rate. Exposed every gap: zero design tokens, no anti-composition rules, incomplete props on 8 components. A clean baseline with honest failure modes.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">Phase 02</span>
+              <span class="cs-stage-name">GitHub enrichment</span>
+              <span class="cs-stage-desc">Added TypeScript interfaces and CSS custom properties as a third data source. Tokens went from 0 to 161. Props coverage improved. Usage guidance went from 87% to 95%.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">Phase 03</span>
+              <span class="cs-stage-name">Schema v2</span>
+              <span class="cs-stage-desc">Evolved what the agent was asked to produce: broader token extraction, implementation notes, cross-referenced anti-composition rules. On the same 5-component sample, token extraction went from 14 to 68.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">Phase 04</span>
+              <span class="cs-stage-name">Enterprise pattern layer</span>
+              <span class="cs-stage-desc">Extended generation to the internal enterprise pattern system using deterministic local enrichment — no API key required. 189 additional components generated and schema-validated.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">Phase 05</span>
+              <span class="cs-stage-name">Deep enrichment</span>
+              <span class="cs-stage-desc">Real Storybook variants (400+), 600+ design tokens, pattern cross-references, and 438 enterprise-specific use cases. Metadata density up 47%.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">Phase 06</span>
+              <span class="cs-stage-name">Full enrichment</span>
+              <span class="cs-stage-desc">ARIA APG patterns mapped to every component. Explicit sizing constraints. Best practices and common mistakes extracted from designer-authored Figma documentation. Layer policy files refactored to separate rigid guardrails from component-level detail.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Data Pipeline</h2>
+          <div class="cs-body">
+            <p><strong>Sources:</strong> Storybook (1,274 stories), Documentation site (usage pages), GitHub source (TypeScript + CSS custom properties).</p>
+            <p><strong>Agent:</strong> Autonomous AI agent, locked schema, locked prompt, temperature 0.</p>
+            <p><strong>Output:</strong> 281 schema-validated component JSONs — 91 Salt + 190 enterprise, 100% validation pass rate.</p>
+            <p><strong>Consumers:</strong> Component selection, code generation, accessibility QA, governance checks.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Skills &amp; Agents</h2>
+          <div class="cs-body">
+            <p>The data dictionary powers a suite of skills and agents that designers invoke directly in VS Code via GitHub Copilot:</p>
+          </div>
+          <div class="cs-skill-icons">
+            <div class="cs-skill-icon-item">
+              <img src="../images/agentic/shape.png"
+                data-light="../images/agentic/shape.png"
+                data-dark="../images/agentic/shape_dark.png"
+                alt="Shape" />
+              <span class="cs-skill-label">Shape</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/agentic/component.png"
+                data-light="../images/agentic/component.png"
+                data-dark="../images/agentic/component_dark.png"
+                alt="Component" />
+              <span class="cs-skill-label">Component</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/agentic/review.png"
+                data-light="../images/agentic/review.png"
+                data-dark="../images/agentic/review_dark.png"
+                alt="Review" />
+              <span class="cs-skill-label">Review</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/agentic/figmatocode.png"
+                data-light="../images/agentic/figmatocode.png"
+                data-dark="../images/agentic/figmatocode_dark.png"
+                alt="Code" />
+              <span class="cs-skill-label">Code</span>
+            </div>
+          </div>
+          <div class="cs-table-wrap">
+            <table class="cs-table">
+              <thead>
+                <tr>
+                  <th>Skill</th>
+                  <th>What it does</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>shape</td>
+                  <td>Takes an unstructured, open-ended prompt — analyzes the intent, asks clarifying questions, and requests human confirmation before handing off to Component</td>
+                </tr>
+                <tr>
+                  <td>component</td>
+                  <td>Picks the right component options and lists the props that match your intent</td>
+                </tr>
+                <tr>
+                  <td>review</td>
+                  <td>Audits generated output against Global Banking override rules and WCAG 2.1 AA accessibility standards</td>
+                </tr>
+                <tr>
+                  <td>code</td>
+                  <td>Reads a selected Figma frame, extracts component hierarchy, and generates production-ready code at ~95% design fidelity</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Designer Workflow</h2>
+          <div class="cs-body">
+            <p>Setup is a single <strong>npx command</strong>. Run it, answer a few prompts, and you're fully scaffolded in under 5 minutes — no terminal expertise required, no config files, no design system knowledge needed to get started.</p>
+            <p>From there, designers describe what they want to build in plain language. The agent reads the data dictionary, selects components per layer policy, generates code with all required states, applies design tokens, and marks output as VERIFIED / UNVERIFIED / PARTIAL. Quality gates — accessibility audit, token check, GB compliance review — run on demand.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Figma → Code</h2>
+          <div class="cs-body">
+            <p>Vague prompts produce vague code. The highest-fidelity input path is a Figma plugin I built that reads a selected frame, extracts the full component JSON, and converts it into a structured prompt — with layer names, component hierarchy, and design intent intact.</p>
+            <p>That prompt, fed into VS Code with Claude and the data dictionary as context, produces output that is <strong>~95% identical to the original Figma design</strong> — without the designer writing a single line of code.</p>
+            <p>Context is king in practice: the more precisely you describe the design intent going in, the less correction the agent needs coming out.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">The Data Dictionary</h2>
+          <div class="cs-body">
+            <blockquote class="cs-blockquote">Context is king.</blockquote>
+            <p>Every decision in this system comes back to that principle. The data dictionary is not documentation — it is context, structured for a machine. The richer the context the agent has before it generates a single line of code, the closer the output is to what the designer intended.</p>
+            <p>That also means knowing what to leave out. I deliberately excluded internal animation timing, anatomy layer ordering, and spacing internals from the extraction — because an agent generating code doesn't need them. It needs best practices and common mistakes. Everything else is noise that degrades signal.</p>
+            <p>Layer policies are rigid guardrails that rarely change. Component JSONs are comprehensive and self-contained — everything an agent needs, nothing it doesn't.</p>
+            <blockquote class="cs-blockquote">Knowing what to leave out is harder than knowing what to include.</blockquote>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Fields That Matter</h2>
+          <div class="cs-body">
+            <p>Most schema fields document what a component <em>is</em>. These three document what it <em>does in context</em> — the difference between plausible code and correct code.</p>
+            <p><strong>composes_with</strong> — Components this one is designed to work alongside. Sourced from Storybook imports, TSX composition, and docs.</p>
+            <p><strong>do_not_compose_with</strong> — Two valid components that are wrong together. Without this, the agent has no signal. Sourced from when_not_to_use cross-ref, GB overrides, and usage patterns.</p>
+            <p><strong>domain_instances</strong> — Banking context mappings — how this component has been used across real GB screens. Empty at generation, filled over time. The system grows more accurate as it's used.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">What This Proves</h2>
+          <div class="cs-body">
+            <p>A design system can be made machine-readable at scale, maintained autonomously, and used to power AI-native workflows — component selection, vibe coding guardrails, design-to-code pipelines.</p>
+            <p>We're not far from a design system that doesn't wait for a designer to look something up. It already knows. It tells you before you ask.</p>
+            <p>That's not a better design system. That's a different kind of design system entirely.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">What's Next</h2>
+          <div class="cs-body">
+            <p><strong>LOB-specific installers.</strong> Each line of business gets a tailored installer — built with designers from that team, not handed down to them. Having the same designers shape the tool they'll use means they have skin in the game, and the output reflects how their workflows actually run.</p>
+            <p><strong>Adoption measurement.</strong> Instrumentation to track how the system is being used across teams — which skills get invoked, where designers drop off, and what the output quality looks like over time. Adoption without measurement is just hope.</p>
+            <p><strong>Governance at scale.</strong> How do you keep an agentic system trustworthy as the underlying components change? How do you prevent an agent from confidently generating code against a component deprecated last Tuesday? That's the next hard problem — and the answer doesn't exist yet.</p>
+          </div>
+        </div>
+
+        <nav class="cs-nav">
+          <span></span>
+          <a href="syndicated-loan.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Syndicated Loan — Future State</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>

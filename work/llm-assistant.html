@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System Compass — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">Design System Compass</h1>
+          <p class="cs-subtitle">A conversational assistant that answers design system questions before you have to ask the team.</p>
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">80+</span>
+              <span class="cs-stat-label">Designers in Global Banking</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">5 hrs</span>
+              <span class="cs-stat-label">DS team time saved per week</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">Q4 '26</span>
+              <span class="cs-stat-label">CIB-wide rollout</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">The Problem</h2>
+          <div class="cs-body">
+            <p>Design system support doesn't scale. Every question answered by a human is a question that could have been answered by the system itself. At enterprise scale — dozens of product teams, two design systems, constantly evolving components — the support burden becomes a bottleneck.</p>
+            <p>Designers were asking the same questions. The answers existed in documentation. The gap was access: the docs were there, but finding the right answer fast enough to matter wasn't.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">What I Built</h2>
+          <div class="cs-body">
+            <p>In January 2026, I built Design System Compass — an LLM assistant for the Global Banking Design System that lets designers query component guidelines, usage rules, and best practices directly, without routing through the design systems team.</p>
+            <p>The assistant was built using JPMC's internal AI infrastructure, with comprehensive instruction sets covering both the open-source Salt foundation and the enterprise pattern layer built on top of it. Writing those instruction sets was the hardest part: the model needed enough context to give accurate, specific answers — not paraphrased documentation.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">In Practice</h2>
+          <div class="cs-body">
+            <p>Compass answers questions about component behavior — sticky header rules across scroll contexts, CTA placement guidance, Salt vs. enterprise layer breakdowns, and responsive behavior rules.</p>
+            <p>Answers cite sources. When documentation doesn't cover a case, Compass flags the gap rather than guessing — the same anti-hallucination discipline built into the broader Agentic Design System.</p>
+          </div>
+          <img class="cs-screenshot"
+            src="../images/compass/compass-sticky-headers.png"
+            data-light="../images/compass/compass-sticky-headers.png"
+            data-dark="../images/compass/compass-sticky-headers.png"
+            alt="Compass — Sticky Headers" />
+          <img class="cs-screenshot"
+            src="../images/compass/compass-cta-placement.png"
+            data-light="../images/compass/compass-cta-placement.png"
+            data-dark="../images/compass/compass-cta-placement.png"
+            alt="Compass — CTA Placement" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Why It Matters</h2>
+          <div class="cs-body">
+            <p>This is a different kind of design system artifact. Not a component. Not a guideline page. A conversational layer on top of the system that makes it more likely to be used correctly — and faster to query than any documentation site.</p>
+            <p>Compass is in active use with 80+ designers across Global Banking, with a full CIB-wide rollout planned for Q4 2026. It connects directly to the broader agentic design system infrastructure — the same component data dictionary that powers code generation also powers Compass's answers.</p>
+          </div>
+        </div>
+
+        <nav class="cs-nav">
+          <a href="ai-workshop.html" class="cs-nav-link">
+            <span class="cs-nav-dir">Prev</span>
+            <span class="cs-nav-label">AI Prototyping Workshop</span>
+          </a>
+          <a href="unity.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Unity Design System</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>
