@@ -499,7 +499,17 @@
 }
 
 @media (max-width: 500px) {
-  .cs-skill-icon-item .cs-skill-label { font-size: 11px; }
+  .cs-skill-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+  .cs-skill-icon-item img {
+    width: 120px;
+    height: 120px;
+  }
+  .cs-skill-icon-item .cs-skill-label { font-size: 13px; }
 }
 
 /* ── Skill table ─────────────────────────────────────── */
@@ -553,4 +563,11 @@
   .cs-subtitle { font-size: 16px; }
   .work-item-header { flex-direction: column; gap: 8px; }
   .work-item-tags { justify-content: flex-start; }
+  .cs-stat-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .cs-stat-value { font-size: 28px; }
+  .cs-stat-label { white-space: normal; }
 }

@@ -208,7 +208,7 @@ body {
 
 /* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 900px) {
-  .page { padding: 0 48px 56px; }
+  .page { padding: 0 24px 56px; }
 }
 
 @media (max-width: 780px) {
@@ -217,7 +217,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .page { padding: 0 24px 48px; }
+  .page { padding: 0 12px 48px; }
   .inner { gap: 36px; }
   .header-row  { width: 276px; }
   .footer-divider { width: 276px; }
