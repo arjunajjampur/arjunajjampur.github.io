@@ -17,8 +17,20 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
+  // Apply on load — stored preference takes priority, else follow system
   var stored = localStorage.getItem('theme');
-  if (stored) applyTheme(stored === 'dark');
+  if (stored) {
+    applyTheme(stored === 'dark');
+  } else {
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+
+  // React to system preference changes (e.g. user switches OS dark mode)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches);
+    }
+  });
 
   if (btn) {
     btn.addEventListener('click', function () {
