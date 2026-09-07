@@ -145,6 +145,7 @@
 @media (max-width: 780px) {
   .content { width: 376px; gap: 24px; }
   .about-journey-wrap { width: 140px; }
+  .contact-icon-label { font-size: 13px; }
 }
 
 @media (max-width: 500px) {
@@ -156,4 +157,13 @@
   .about-journey { width: 100px; flex-shrink: 0; }
   .about-journey-caption { text-align: left; }
   .about-text p { font-size: 14px; }
+  .contact-icons {
+    width: 276px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+  .contact-icon-item img { width: 120px; height: 120px; }
+  .contact-icon-label { font-size: 13px; }
 }
