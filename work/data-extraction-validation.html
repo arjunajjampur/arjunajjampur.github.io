@@ -175,7 +175,7 @@
             <p>The pattern's information architecture broke down into six parts, each solving a specific failure point teams kept hitting independently.</p>
           </div>
           <figure class="cs-diagram">
-            <svg viewBox="0 0 1180 820" role="img" aria-label="Data field values move from AI generation or manual entry through pending, editing, validation or override, each tied to its own error-handling logic; header blocks are added, deleted, or reordered independently.">
+            <svg viewBox="0 0 1180 820" role="img" aria-label="Data field values come from AI generation, which can be regenerated on demand, or manual entry, then move through pending, editing, and validation or override, each tied to its own error-handling logic; header blocks are added, deleted, or reordered independently.">
               <defs>
                 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                   <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
@@ -192,7 +192,8 @@
               <text x="435.0" y="320.0" text-anchor="middle" dominant-baseline="middle" font-family="PPValveMedium, sans-serif" font-size="13" fill="currentColor">Manual</text>
               <path d="M400,58.8 A55.0,8.8 0 0 1 510,58.8 L510,96.2 A55.0,8.8 0 0 1 400,96.2 Z" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
               <ellipse cx="455.0" cy="58.8" rx="55.0" ry="8.8" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
-              <text x="455.0" y="82.78" text-anchor="middle" dominant-baseline="middle" font-family="PPValveMedium, sans-serif" font-size="11" fill="currentColor">Regenerate</text>
+              <path d="M424.25,71.37 A6.5,6.5 0 1 1 415.37,73.75" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" marker-end="url(#arrow)" />
+              <text x="470" y="77.78" text-anchor="middle" dominant-baseline="middle" font-family="PPValveMedium, sans-serif" font-size="10" fill="currentColor">Regenerate</text>
               <rect x="580" y="225" width="110" height="60" rx="6" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
               <text x="635.0" y="255.0" text-anchor="middle" dominant-baseline="middle" font-family="PPValveMedium, sans-serif" font-size="13" fill="currentColor">Pending</text>
               <polygon points="805,200 895,255 805,310 715,255" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
@@ -243,7 +244,7 @@
               <path d="M750,590 L790,590" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="6,5" marker-end="url(#arrow)" />
               <path d="M520,680 L580,680" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arrow)" />
             </svg>
-            <figcaption>How a field value moves from extraction through validation and override, and how header blocks are added, removed, or reordered. Dashed paths are optional or conditional.</figcaption>
+            <figcaption>How a field value moves from extraction through validation and override — an AI-generated value can be regenerated on demand — and how header blocks are added, removed, or reordered. Dashed paths are optional or conditional.</figcaption>
           </figure>
           <div class="cs-stages">
             <div class="cs-stage">
