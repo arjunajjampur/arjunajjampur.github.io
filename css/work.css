@@ -305,6 +305,29 @@
   margin-right: auto;
 }
 
+/* ── Inline diagram ──────────────────────────────────── */
+.cs-diagram {
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+.cs-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cs-diagram figcaption {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  color: var(--fg);
+  opacity: 0.6;
+  line-height: 1.5;
+  margin-top: 10px;
+  transition: color 0.2s ease;
+}
+
 /* ── NDA banner ──────────────────────────────────────── */
 .cs-nda {
   display: flex;
