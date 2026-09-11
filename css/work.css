@@ -512,6 +512,35 @@
   .cs-skill-icon-item .cs-skill-label { font-size: 13px; }
 }
 
+/* ── Skill icons (5-up variant) ───────────────────────── */
+.cs-skill-icons--five .cs-skill-icon-item img {
+  width: 130px;
+  height: 130px;
+}
+
+@media (max-width: 780px) {
+  .cs-skill-icons--five {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+  .cs-skill-icons--five .cs-skill-icon-item img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cs-skill-icons--five {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cs-skill-icons--five .cs-skill-icon-item img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* ── Skill table ─────────────────────────────────────── */
 .cs-label {
   font-family: 'PPValveStencil', sans-serif;

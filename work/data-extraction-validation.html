@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Data Extraction &amp; Validation Pattern — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">AI Data Extraction &amp; Validation Pattern</h1>
+          <p class="cs-subtitle">A reusable enterprise pattern for reviewing, validating, and correcting AI-extracted information — built with Salt using atomic design principles.</p>
+          <img class="cs-screenshot" src="../images/data-extraction/pattern-overview.png" alt="AI Data Extraction &amp; Validation pattern overview" />
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">Published</span>
+              <span class="cs-stat-label">GB Design Pattern Library</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">100+</span>
+              <span class="cs-stat-label">Extracted fields supported per document</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">Design → Code</span>
+              <span class="cs-stat-label">AI-assisted pipeline with Copilot &amp; VS Code</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Context</h2>
+          <div class="cs-body">
+            <p>Organizations across JPMorganChase Global Banking were beginning to use LLMs to extract information from documents, but teams were building in isolation. Different groups were shipping document extraction flows, entity extraction experiences, validation workflows, and AI review processes — each with its own interaction model.</p>
+            <p>There was no common pattern for reviewing extracted data, validating AI outputs, correcting mistakes, preserving source attribution, or tracking human overrides. As AI adoption accelerated, that fragmentation was on track to create real usability, accessibility, and governance problems across the business.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">My Role</h2>
+          <div class="cs-body">
+            <p>I was asked to design and operationalize a reusable Design System pattern that would standardize AI extraction experiences, support complex enterprise workflows, scale across lines of business, enable human oversight of AI outputs, and create a bridge between design and engineering.</p>
+            <p>That meant gathering use cases from teams already building extraction tools, defining UX principles, writing guidelines, working directly with engineers, and driving the pattern to implementation readiness.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Research &amp; Discovery</h2>
+          <div class="cs-body">
+            <p>I started by collecting extraction workflows already in flight across multiple teams — competitive examples, internal prototypes, and early inspiration boards — and mapped the common interaction patterns underneath them.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Problem Definition</h2>
+          <div class="cs-body">
+            <p>The core loop every team kept reinventing came down to the same five steps:</p>
+          </div>
+          <div class="cs-layers">
+            <div class="cs-layer cs-layer--top">
+              <span class="cs-layer-num">01</span>
+              <div>
+                <div class="cs-layer-title">AI extracts data</div>
+                <div class="cs-layer-desc">The model pulls fields and entities out of a source document.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">02</span>
+              <div>
+                <div class="cs-layer-title">User reviews</div>
+                <div class="cs-layer-desc">A person scans what was extracted against the source.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">03</span>
+              <div>
+                <div class="cs-layer-title">User validates</div>
+                <div class="cs-layer-desc">Correct fields are confirmed and marked trustworthy.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">04</span>
+              <div>
+                <div class="cs-layer-title">User corrects</div>
+                <div class="cs-layer-desc">Mistakes are edited in place, with a reason captured.</div>
+              </div>
+            </div>
+            <div class="cs-layer">
+              <span class="cs-layer-num">05</span>
+              <div>
+                <div class="cs-layer-title">System learns</div>
+                <div class="cs-layer-desc">Corrections feed back to improve future extractions.</div>
+              </div>
+            </div>
+          </div>
+          <div class="cs-body">
+            <p>Left unaddressed, this fragmentation carried real risk: missing provenance, hidden confidence levels, inconsistent editing behavior, and no audit trail for what a human had changed and why.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Design Principles</h2>
+          <div class="cs-body">
+            <p>Every downstream decision — from field states to source indicators to the editing flow — traces back to a small set of principles established early and applied consistently across the pattern.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Built on Atomic Design</h2>
+          <div class="cs-body">
+            <p>The pattern was assembled from <strong>Salt</strong>, JPMorganChase's enterprise design system, using atomic design principles from the ground up — so every piece of it was reusable, themeable, and easy for engineering to implement directly from existing components.</p>
+          </div>
+          <div class="cs-skill-icons cs-skill-icons--five">
+            <div class="cs-skill-icon-item">
+              <img src="../images/data-extraction/atoms.png"
+                data-light="../images/data-extraction/atoms.png"
+                data-dark="../images/data-extraction/atoms_dark.png"
+                alt="Atoms" />
+              <span class="cs-skill-label">Atoms</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/data-extraction/molecules.png"
+                data-light="../images/data-extraction/molecules.png"
+                data-dark="../images/data-extraction/molecules_dark.png"
+                alt="Molecules" />
+              <span class="cs-skill-label">Molecules</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/data-extraction/organisms.png"
+                data-light="../images/data-extraction/organisms.png"
+                data-dark="../images/data-extraction/organisms_dark.png"
+                alt="Organisms" />
+              <span class="cs-skill-label">Organisms</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/data-extraction/templates.png"
+                data-light="../images/data-extraction/templates.png"
+                data-dark="../images/data-extraction/templates_dark.png"
+                alt="Templates" />
+              <span class="cs-skill-label">Templates</span>
+            </div>
+            <div class="cs-skill-icon-item">
+              <img src="../images/data-extraction/pages.png"
+                data-light="../images/data-extraction/pages.png"
+                data-dark="../images/data-extraction/pages_dark.png"
+                alt="Pages" />
+              <span class="cs-skill-label">Pages</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Pattern Anatomy</h2>
+          <div class="cs-body">
+            <p>The pattern's information architecture broke down into six parts, each solving a specific failure point teams kept hitting independently.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/data-extraction/workflow-diagram.png" alt="AI validation workflow diagram" />
+          <div class="cs-stages">
+            <div class="cs-stage">
+              <span class="cs-stage-num">01</span>
+              <span class="cs-stage-name">Document viewer</span>
+              <span class="cs-stage-desc">Source document stays visible alongside extracted data, so a reviewer never loses context.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">02</span>
+              <span class="cs-stage-name">Navigation tree</span>
+              <span class="cs-stage-desc">Jump between sections and pages of large, multi-page documents.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">03</span>
+              <span class="cs-stage-name">Extracted fields</span>
+              <span class="cs-stage-desc">Every field the model pulled out, grouped and labeled consistently.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">04</span>
+              <span class="cs-stage-name">Validation indicators</span>
+              <span class="cs-stage-desc">At-a-glance state for whether a field has been reviewed, confirmed, or flagged.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">05</span>
+              <span class="cs-stage-name">Source attribution</span>
+              <span class="cs-stage-desc">Where a value came from — AI generated, human entered, or system generated.</span>
+            </div>
+            <div class="cs-stage">
+              <span class="cs-stage-num">06</span>
+              <span class="cs-stage-name">Editing workflow</span>
+              <span class="cs-stage-desc">A consistent path to correct a value while preserving an audit trail.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Component States &amp; Provenance</h2>
+          <div class="cs-body">
+            <p>Provenance turned out to be the differentiator. Every field carries both a <strong>state</strong> — extracted, validated, edited, or rejected — and a <strong>source</strong> — AI generated, human entered, system generated, or validated — so nothing loses its history as it moves through review.</p>
+            <p>Editing follows one path everywhere the pattern is used: a field is opened, edited, given a reason for the change, and saved — with the original value and the audit trail preserved underneath.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/data-extraction/field-states.png" alt="Field state system — extracted, validated, edited, rejected" />
+          <img class="cs-screenshot" src="../images/data-extraction/source-attribution.png" alt="Source attribution and confidence model" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Accessibility &amp; Scale</h2>
+          <div class="cs-body">
+            <p>Real documents don't stop at a handful of fields. The pattern had to hold up at 100+ extracted fields per document, so search, filter, tree navigation, and multi-page support were treated as core requirements rather than later additions.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">From Pattern to Code</h2>
+          <div class="cs-body">
+            <p>The pattern moved from concept to reusable asset through a defined pipeline: pattern definition, guidelines, a Figma library, a Storybook implementation, and finally hand-off to product teams. It's published in JPMorganChase's GB Design Pattern Library today.</p>
+            <p>On the development side, I worked design-to-code directly — using GitHub Copilot inside a VS Code workflow to generate components and documentation straight from the design pattern, shortening the distance between design intent and shipped code.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/data-extraction/pattern-to-code.png" alt="Pattern to Storybook to code pipeline" />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Outcome</h2>
+          <div class="cs-body">
+            <ul>
+              <li>Published in the GB Design Pattern Library</li>
+              <li>Established as a reusable enterprise pattern</li>
+              <li>Documentation and guidelines completed</li>
+              <li>Code implementation initiated</li>
+              <li>Accessibility-defined workflow for 100+ field documents</li>
+              <li>Supported multiple AI extraction use cases across teams</li>
+              <li>Established a governance model for AI-generated content</li>
+            </ul>
+            <blockquote class="cs-blockquote">Designed and operationalized an enterprise AI Data Extraction &amp; Validation Pattern that standardized how users review, validate, and correct AI-generated information — transforming a collection of ad hoc workflows into a reusable design system asset with documented implementation guidance and code-ready specifications.</blockquote>
+          </div>
+        </div>
+
+        <nav class="cs-nav">
+          <a href="agentic-ds.html" class="cs-nav-link">
+            <span class="cs-nav-dir">Prev</span>
+            <span class="cs-nav-label">Agentic Design System</span>
+          </a>
+          <a href="syndicated-loan.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Syndicated Loan — Future State</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>
