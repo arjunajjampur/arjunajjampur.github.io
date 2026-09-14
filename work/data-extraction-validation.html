@@ -279,8 +279,45 @@
             <p>Provenance turned out to be the differentiator. Every field carries both a <strong>state</strong> — extracted, validated, edited, or rejected — and a <strong>source</strong> — AI generated, human entered, system generated, or validated — so nothing loses its history as it moves through review.</p>
             <p>Editing follows one path everywhere the pattern is used: a field is opened, edited, given a reason for the change, and saved — with the original value and the audit trail preserved underneath.</p>
           </div>
-          <img class="cs-screenshot" src="../images/data-extraction/field-states.png" alt="Field state system — extracted, validated, edited, rejected" />
-          <img class="cs-screenshot" src="../images/data-extraction/source-attribution.png" alt="Source attribution and confidence model" />
+          <figure class="cs-diagram">
+            <svg viewBox="0 0 1120 540" role="img" aria-label="Anatomy of an extracted data row: the label's trailing icon shows whether the value came from AI, manual entry, or has no source; the value's leading check icon shows whether it has been validated or overwritten, and doubles as the Validate action; a trailing pencil icon is the Overwrite action.">
+              <rect x="40" y="320" width="1000" height="70" rx="8" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
+              <text x="70" y="360" text-anchor="start" dominant-baseline="middle" font-family="PPValveMedium, sans-serif" font-size="15" fill="currentColor">Amount</text>
+              <text x="170" y="358" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="15" fill="currentColor">&#10022;</text>
+              <text x="790" y="360" text-anchor="end" dominant-baseline="middle" font-family="PPValveMedium, sans-serif" font-size="15" fill="currentColor">500,000,000.00</text>
+              <text x="860" y="358" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="17" fill="currentColor">&#10003;</text>
+              <text x="950" y="358" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="15" fill="currentColor">&#9998;</text>
+
+              <rect x="40" y="30" width="250" height="140" rx="6" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
+              <text x="56" y="52" font-family="PPValveMedium, sans-serif" font-size="13" fill="currentColor">Label trailing icon</text>
+              <text x="56" y="72" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">Shows source of</text>
+              <text x="56" y="92" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">data extraction</text>
+              <text x="56" y="112" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">&#8226; AI &#8226; Manual &#8226; None</text>
+              <line x1="165" y1="170" x2="170" y2="320" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3,4" />
+              <circle cx="170" cy="320" r="3" fill="currentColor" />
+
+              <rect x="650" y="30" width="250" height="120" rx="6" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
+              <text x="666" y="52" font-family="PPValveMedium, sans-serif" font-size="13" fill="currentColor">Value leading icon</text>
+              <text x="666" y="72" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">Shows action</text>
+              <text x="666" y="92" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">completion</text>
+              <text x="666" y="112" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">&#8226; Validated &#8226; Overwritten</text>
+              <line x1="775" y1="150" x2="860" y2="320" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3,4" />
+              <circle cx="860" cy="320" r="3" fill="currentColor" />
+
+              <rect x="930" y="130" width="150" height="80" rx="6" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
+              <text x="946" y="152" font-family="PPValveMedium, sans-serif" font-size="13" fill="currentColor">Action 2</text>
+              <text x="946" y="172" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">Overwrite</text>
+              <line x1="1005" y1="210" x2="950" y2="320" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3,4" />
+              <circle cx="950" cy="320" r="3" fill="currentColor" />
+
+              <rect x="770" y="430" width="150" height="80" rx="6" fill="var(--glass-bg)" stroke="currentColor" stroke-width="1.4" />
+              <text x="786" y="452" font-family="PPValveMedium, sans-serif" font-size="13" fill="currentColor">Action 1</text>
+              <text x="786" y="472" font-family="PPValveLight, sans-serif" font-size="13" fill="currentColor" opacity="0.75">Validate</text>
+              <line x1="845" y1="430" x2="860" y2="390" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3,4" />
+              <circle cx="860" cy="390" r="3" fill="currentColor" />
+            </svg>
+            <figcaption>Anatomy of a single extracted field row. The label's trailing icon marks where the value came from; the value's leading icon shows whether it's been validated or overwritten and doubles as the Validate action; the pencil is Overwrite.</figcaption>
+          </figure>
         </div>
 
         <div class="cs-section">
