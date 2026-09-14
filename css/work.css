@@ -104,6 +104,19 @@
 
 .work-list-last { border-bottom: 1px solid var(--accent); }
 
+/* ── Coming soon placeholder ─────────────────────────── */
+.work-item--disabled {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
+.work-item-tag--soon {
+  color: var(--fg);
+  border-style: dashed;
+  opacity: 0.7;
+}
+
 /* ── Case study layout ───────────────────────────────── */
 .cs-content {
   width: 768px;
