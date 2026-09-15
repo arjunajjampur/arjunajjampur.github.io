@@ -318,6 +318,22 @@
   margin-right: auto;
 }
 
+.cs-screenshot-figure {
+  margin: 0;
+}
+
+.cs-screenshot-figure figcaption {
+  font-family: 'PPValveLight', sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  color: var(--fg);
+  opacity: 0.6;
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
 /* ── Inline diagram ──────────────────────────────────── */
 .cs-diagram {
   color: var(--fg);
