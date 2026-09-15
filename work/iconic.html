@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iconic — Arjun Ajjampur</title>
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="../css/section.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="inner">
+
+      <div class="header-row">
+        <div class="breadcrumb">
+          <a href="../index.html" class="hi-logo" aria-label="Home">
+            <img src="../images/hi.svg" alt="hi" />
+          </a>
+          <span class="breadcrumb-slash">/</span>
+          <a href="../work.html">
+            <img class="breadcrumb-img" src="../images/work.png"
+              data-light="../images/work.png" data-dark="../images/work_dark.png" alt="work" />
+          </a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">dark</button>
+      </div>
+
+      <div class="cs-content">
+
+        <div class="cs-impact">
+          <h1 class="cs-title">Iconic</h1>
+          <p class="cs-subtitle">An internal web app for icon creation with custom built tools.</p>
+          <img class="cs-screenshot" src="../images/iconic/app-overview.png" alt="Iconic's full workspace — a Salt DS reference library on the left, a grid-snapped drawing canvas in the center, and live preview, SVG source, and contribution preflight panels on the right." />
+          <div class="cs-stat-row">
+            <div class="cs-stat">
+              <span class="cs-stat-value">2 hrs</span>
+              <span class="cs-stat-label">Down from up to 2 days per icon</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">364</span>
+              <span class="cs-stat-label">Salt DS reference icons, browsable in-app</span>
+            </div>
+            <div class="cs-stat">
+              <span class="cs-stat-value">0</span>
+              <span class="cs-stat-label">Context switches — trace, draw, and export in one tool</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Context</h2>
+          <div class="cs-body">
+            <p>Before Iconic, a new Salt DS icon meant bouncing between a reference file, a drawing tool with no enforced grid, and a separate compliance checklist — then hoping the result actually matched spec. Stroke widths drifted off the 1px standard, nodes landed on sub-pixel coordinates that caused aliasing on export, and naming didn't get checked against what the library already had until review.</p>
+            <p>None of that showed up until someone looked closely. A single icon — draw, check, fix, re-check — could take up to two days once the rework was counted in.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">My Role</h2>
+          <div class="cs-body">
+            <p>I designed and built Iconic solo, end to end — the interaction model, the vector drawing engine, and the compliance rules baked into it. It's a simple app, designed for designers, by a designer: every tool in it exists because I hit the same wall myself drawing icons by hand.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Overview</h2>
+          <div class="cs-body">
+            <p>Iconic is built around three panels. <strong>Reference</strong> on the left searches the Salt DS library or takes an uploaded SVG. The <strong>artboard</strong> in the center is a snapping canvas locked to Salt's 12×12 grid. And on the right, <strong>Preview</strong>, <strong>Source</strong>, and <strong>Contribution preflight</strong> update live as you draw — so an icon is checked continuously, not just at the end.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Reference &amp; Import</h2>
+          <div class="cs-body">
+            <p>Every icon starts from somewhere. The reference panel searches the Salt DS library — 364 icons across four sizes and outline or solid variants — or takes an uploaded SVG. Selecting a reference doesn't just show it for comparison: it converts the icon into an editable overlay of vector points, positioned directly on the canvas grid, so an existing shape can be traced instead of starting from a blank artboard.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/iconic/trace-reference.png" alt="Tracing the Cloud Success reference icon — its outline is converted to editable vector points overlaid on the 12×12 grid, ready to import." />
+          <div class="cs-body">
+            <p>Import to Artboard drops that traced result straight onto the working canvas, fully editable and already snapped to grid — the fastest path from an existing icon to a new variant.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/iconic/import-to-artboard.png" alt="The traced Cloud Success icon placed on the working artboard, snapped to the 12×12 grid and ready to edit." />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Drawing Tools &amp; Line Arc</h2>
+          <div class="cs-body">
+            <p>Underneath, Iconic carries the standard vector kit — pen, shapes, pixel mode, fill and stroke, and boolean operations to combine or subtract shapes.</p>
+            <p>The one built specifically for how Salt DS icons get drawn is <strong>Line Arc</strong>: hold shift while drawing with the pen tool, and the next segment converts from a straight line into an arc. A rounded corner or a curve happens mid-stroke, without stopping to set a corner radius or reach for a separate arc tool.</p>
+          </div>
+          <img class="cs-screenshot" src="../images/iconic/line-arc-tool.png" alt="Line Arc — pen tool plus shift converts the next segment into an arc, shown here rounding a corner mid-stroke without stopping to switch tools." />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Live Feedback &amp; Compliance</h2>
+          <div class="cs-body">
+            <p>The right panel is where a drawn shape becomes a shippable icon — three tools that update live as you draw, so problems surface while you're still working instead of at review.</p>
+            <p><strong>Preview</strong> renders the icon at every size Salt DS ships — 12×12, 20×20, 32×32, and 48×48 — in both light and dark, so a stroke that reads fine at 48px but disappears at 12px is obvious immediately.</p>
+          </div>
+          <img class="cs-screenshot cs-screenshot--half" src="../images/iconic/size-preview.png" alt="Live preview across 12×12, 20×20, 32×32, and 48×48, each rendered in light and dark." />
+          <div class="cs-body">
+            <p><strong>Source</strong> shows the exact SVG markup as it's drawn — width, viewBox, stroke conventions, and every path — so what engineering receives is the same markup the canvas produced, not a re-export.</p>
+          </div>
+          <img class="cs-screenshot cs-screenshot--half" src="../images/iconic/svg-source.png" alt="The Source panel — live SVG markup for the drawn icon, viewBox, stroke attributes, and each path." />
+          <div class="cs-body">
+            <p><strong>Contribution preflight</strong> is the compliance layer: automated checks covering content, naming — used as the SVG's aria-label and file name — brand neutrality, stroke width, whole-pixel node placement, the 12×12 bounds, search synonyms for the icon library, and uniqueness within Salt DS. Each resolves to pass, warning, or error, with a running count at the bottom. Nothing ships until preflight is clean.</p>
+          </div>
+          <img class="cs-screenshot cs-screenshot--half" src="../images/iconic/contribution-preflight.png" alt="Contribution preflight — automated checklist covering content, naming, brand neutrality, stroke width, pixel-grid snapping, bounds, synonyms, and uniqueness, with a live pass, warning, and error count." />
+        </div>
+
+        <div class="cs-section">
+          <h2 class="cs-section-heading">Outcome</h2>
+          <div class="cs-body">
+            <ul>
+              <li>Icon creation time down from up to 2 days to about 2 hours</li>
+              <li>Salt DS grid, stroke, and naming conventions enforced automatically, before export</li>
+              <li>One tool for trace, draw, preview, and export — no round-trips through separate apps</li>
+              <li>Finished SVG markup handed to engineering directly from the Source panel</li>
+              <li>Designed and built solo, for designers, by a designer</li>
+            </ul>
+            <blockquote class="cs-blockquote">A simple app, designed for designers, by a designer — every tool in it exists because I hit the same wall myself drawing icons by hand.</blockquote>
+          </div>
+        </div>
+
+        <nav class="cs-nav">
+          <a href="data-extraction-validation.html" class="cs-nav-link">
+            <span class="cs-nav-dir">Prev</span>
+            <span class="cs-nav-label">AI Data Extraction &amp; Validation Pattern</span>
+          </a>
+          <a href="syndicated-loan.html" class="cs-nav-link cs-nav-link--next">
+            <span class="cs-nav-dir">Next</span>
+            <span class="cs-nav-label">Syndicated Loan — Future State</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="footer-divider" />
+    <div class="footer-inner">
+      <div class="footer-logo footer-logo--figma">
+        <img src="../images/figma-logo-svgrepo-com.svg" alt="Figma" />
+      </div>
+      <span class="footer-plus">+</span>
+      <div class="footer-logo footer-logo--claude">
+        <img src="../images/claude.png" alt="Claude" />
+      </div>
+      <span class="footer-sep">|</span>
+      <span class="footer-year">2027</span>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+</body>
+</html>
