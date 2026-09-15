@@ -636,6 +636,7 @@
   .cs-stat-row { gap: 24px; }
   .cs-stage { flex-direction: column; gap: 4px; }
   .cs-stage-num, .cs-stage-name { width: auto; }
+  .cs-screenshot--half { width: 100%; }
 }
 
 @media (max-width: 500px) {
